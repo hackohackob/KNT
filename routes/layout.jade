@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
+    link(rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/bootstrap/css/simple-sidebar.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
+    script(src='/bootstrap/js/bootstrap.min.js')
+  body
+    #wrapper.toggled
+      #sidebar-wrapper
+        ul.sidebar-nav
+          li.sidebar-brand
+            a(href="#") Основно меню
+              div(class="btn-group btn-group-right" style="margin-left:20px")
+                button(type="button" class="btn btn-default" id="menu-toggle")
+                  span(href="#" class="glyphicon glyphicon-chevron-left" )
+          li
+            a(href="#") Начало
+          li
+            a(href="#") Учебен процес
+          li
+            a(href="#") Академичен състав
+          li
+            a(href="#") Научни изследвания
+          li
+            a(href="#") Списание КНТ
+          li
+            a(href="#") Учебни курсове
+          li.sidebar-brand
+            a(href="#") Студентска олимпиада
+          li
+            a(href="#") Задачи и решения
+          li
+            a(href="#") Снимки
+          li
+            a(href="#") Архив на PC
+              sup 2
+          li.sidebar-brand
+            a(href="#") Асоциация на възпитаниците
+          li
+            a(href="#") Задачи и решения
+          li.sidebar-brand
+            a(href="#") Втора научна конференция с международно участие
+          li
+            a(href="#") Начало
+          li
+            a(href="#") Организатори
+          li
+            a(href="#") Тематични направления
+          li
+            a(href="#") Оформление
+          li
+            a(href="#") Програма
+          li
+            a(href="#") Контакти
+
+      #page-content-wrapper
+        a(href="#menu-toggle2" class="btn btn-default" id="menu-toggle" style="top:15px;")
+          span(class="glyphicon glyphicon-list")
+        block content
+
+    block end-scripts
+    script.
+      $("#page-content-wrapper").click(function(e){
+        console.log('clicked');
+        alert('clicked');
+        if(!$("#wrapper").hasClass("toggled")){
+          $("wrapper").toggleClass("toggled");
+        }
+      });
+
+      $("#menu-toggle, #menu-toggle2, .menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });

@@ -1,0 +1,58 @@
+#st-trigger-effects{
+  position:fixed;
+  top:20px;
+  left:0px;
+  display:inline-block;
+
+}
+
+#st-trigger-effects button{
+  padding:1vw 1vw;
+  background: white;
+  color:black;
+  font-size:1em;
+  font-size:3vw;
+}
+
+#st-trigger-effects button:hover{
+  background-color: #0F5586;
+  color:white;
+}
+
+
+#buffer{
+  margin:0;
+  padding:20% 10%;
+  padding:15vw 11vw;
+  background-color: rgba(0,0,0,0.6);
+}
+
+
+#heading{
+  text-align:center;
+}
+
+#heading h1{
+  font-size:30px;
+  font-size:11vw;
+  font-family: "Comfortaa";
+  margin-top: 0;
+}
+#heading h3{
+  font-size:20px;
+  font-size:5vw;
+  font-family: "Comfortaa";
+  margin-bottom: 0;
+}
+
+#logo{
+width:5%;
+width:5vw;
+position:absolute;
+right:10px;
+top:10px;
+}
+
+.main{
+  margin:0;
+}

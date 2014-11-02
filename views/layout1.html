@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/simple-sidebar.css">
+    <script src="http://code.jquery.com/jquery-git2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/jquery.event.swipe.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="toggled">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand"><a href="#">Основно меню
+              <div style="margin-left:20px" class="btn-group btn-group-right">
+                <button type="button" class="btn btn-default menu-toggle"><span href="#" class="glyphicon glyphicon-chevron-left"></span></button>
+              </div></a></li>
+          <li><a href="#">Начало</a></li>
+          <li><a href="#">Учебен процес</a></li>
+          <li><a href="#">Академичен състав</a></li>
+          <li><a href="#">Научни изследвания</a></li>
+          <li><a href="#">Списание КНТ</a></li>
+          <li><a href="#">Учебни курсове</a></li>
+          <li class="sidebar-brand"><a href="#">Студентска олимпиада</a></li>
+          <li><a href="#">Задачи и решения</a></li>
+          <li><a href="#">Снимки</a></li>
+          <li><a href="#">Архив на PC<sup>2</sup></a></li>
+          <li class="sidebar-brand"><a href="#">Асоциация на възпитаниците</a></li>
+          <li><a href="#">Задачи и решения</a></li>
+          <li class="sidebar-brand"><a href="#">Втора научна конференция с международно участие</a></li>
+          <li><a href="#">Начало</a></li>
+          <li><a href="#">Организатори</a></li>
+          <li><a href="#">Тематични направления</a></li>
+          <li><a href="#">Оформление</a></li>
+          <li><a href="#">Програма</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper"><a href="#" class="btn btn-default btn-lg menu-toggle menu-toggle-second"><span class="glyphicon glyphicon-list"></span></a>
+      </div>
+    </div>
+    <script>
+      var showing;
+      $('.menu-toggle').click(function(e) {
+        e.preventDefault();
+        $('#wrapper').toggleClass('toggled');
+        showing=!showing;
+      });
+      
+      $(document).ready(function(){
+        if($("#sidebar-wrapper").css("width")>0){
+          showing=true;
+        }else
+        {
+          showing=false;
+        }
+      
+        if(showing){
+          $("#wrapper").toggleClass("toggled");
+          showing=!showing;
+        }
+      });
+      
+      window.onscroll=function(){
+      if($('body').scrollTop()>400){
+        if(!showing) {
+          $("#wrapper").toggleClass("toggled");
+          showing=!showing;
+        }
+      }};
+      
+    </script>
+  </body>
+</html>
+<!--      $("#page-content-wrapper").swipe({-->
+<!--                swipe:function(event,direction,distance,duration,fingerCount,fingerData){-->
+<!--                  if(direction=='right'){-->
+<!--                    $("#wrapper").toggleClass("toggled");-->
+<!--                    showing=!showing;-->
+<!--                  }-->
+<!--                }-->
+<!--              },-->
+<!--              {threshold:50});-->
+<!---->
+<!--      $("#sidebar-wrapper").swipe({-->
+<!--                swipe:function(event,direction,distance,duration,fingerCount,fingerData){-->
+<!--                  if(direction=='left'){-->
+<!--                    $("#wrapper").toggleClass("toggled");-->
+<!--                    showing=!showing;-->
+<!--                  }-->
+<!--                }-->
+<!--              },-->
+<!--              {threshold:50});-->

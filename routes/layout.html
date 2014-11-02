@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/bootstrap/css/simple-sidebar.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="wrapper" class="toggled">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand"><a href="#">Основно меню
+              <div style="margin-left:20px" class="btn-group btn-group-right">
+                <button type="button" id="menu-toggle" class="btn btn-default"><span href="#" class="glyphicon glyphicon-chevron-left"></span></button>
+              </div></a></li>
+          <li><a href="#">Начало</a></li>
+          <li><a href="#">Учебен процес</a></li>
+          <li><a href="#">Академичен състав</a></li>
+          <li><a href="#">Научни изследвания</a></li>
+          <li><a href="#">Списание КНТ</a></li>
+          <li><a href="#">Учебни курсове</a></li>
+          <li class="sidebar-brand"><a href="#">Студентска олимпиада</a></li>
+          <li><a href="#">Задачи и решения</a></li>
+          <li><a href="#">Снимки</a></li>
+          <li><a href="#">Архив на PC<sup>2</sup></a></li>
+          <li class="sidebar-brand"><a href="#">Асоциация на възпитаниците</a></li>
+          <li><a href="#">Задачи и решения</a></li>
+          <li class="sidebar-brand"><a href="#">Втора научна конференция с международно участие</a></li>
+          <li><a href="#">Начало</a></li>
+          <li><a href="#">Организатори</a></li>
+          <li><a href="#">Тематични направления</a></li>
+          <li><a href="#">Оформление</a></li>
+          <li><a href="#">Програма</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper"><a href="#menu-toggle2" id="menu-toggle" style="top:15px;" class="btn btn-default"><span class="glyphicon glyphicon-list"></span></a>
+      </div>
+    </div>
+    <script>
+      $("#page-content-wrapper").click(function(e){
+        console.log('clicked');
+        alert('clicked');
+        if(!$("#wrapper").hasClass("toggled")){
+          $("wrapper").toggleClass("toggled");
+        }
+      });
+      
+      $("#menu-toggle, #menu-toggle2, .menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+  </body>
+</html>

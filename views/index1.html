@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tu-varna, knt, computers, education, university">
+    <meta name="author" content="hackohackob">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/demo.css">
+    <link rel="stylesheet" href="/stylesheets/icons.css">
+    <link rel="stylesheet" href="/stylesheets/component.css">
+    <link rel="stylesheet" href="/icons/flaticon.css">
+    <script src="/javascripts/jquery-1.11.0.js"></script>
+    <script src="http://code.jquery.com/jquery-git2.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/javascripts/modernizr.custom.js"></script>
+    <script src="/javascripts/jss.js"></script>
+    <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
+  </head>
+  <body>
+    <div id="st-container" class="st-container">
+      <nav id="menu-11" class="st-menu st-effect-11">
+        <!--TODO:-->
+        <h2 class="icon icon-lab">ТУ - Варна</h2>
+        <ul>
+          <li class="menu-list-main"><span class="icon icon-study">Основно меню</span></li>
+          <li><a href="/">Начало</a></li>
+          <li><a href="/uch_proces">Учебен процес</a></li>
+          <li><a href="#">Академичен състав</a></li>
+          <li><a href="#">Научни изследвания</a></li>
+          <li><a href="#">Списание КНТ</a></li>
+          <li><a href="#">Учебни курсове</a></li>
+          <li><a href="#">Научни проекти</a></li>
+          <li><a href="#">Международни проекти</a></li>
+          <li><a href="#">История</a></li>
+          <li><a href="#">Новини</a></li>
+          <li><a href="#" class="menu-list-prev">Връзки и контакти</a></li>
+          <li class="menu-list-main long"><a href="#">
+              <div class="icon icon-study"></div><span>Something very long was here, as I can remember as I can rememberas I can rememberas I can remember</span></a></li>
+          <li><a href="#" class="icon icon-study menu-list-prev">Something</a></li>
+          <li class="menu-list-main"><a href="#" class="icon icon-study">Something</a></li>
+          <li><a href="#" class="icon icon-study">Something</a></li>
+          <li><a href="#" class="icon icon-study">Something</a></li>
+          <li><a href="#" class="icon icon-study">Something</a></li>
+          <li><a href="#" class="icon icon-study">Something</a></li>
+          <li><a href="#" class="icon icon-study">Something</a></li>
+        </ul>
+      </nav>
+      <div class="st-pusher">
+        <div class="st-content">
+          <div class="st-content-inner">
+            <div id="st-trigger-effects">
+              <button data-effect="st-effect-11"><span class="glyphicon glyphicon-list"></span></button>
+            </div>
+            <header class="header">
+            </header>
+            <div class="main clearfix">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/javascripts/classie.js"></script>
+  <script src="/javascripts/sidebarEffects.js"></script>
+  <script>
+    $(function(){
+      $('.st-menu').mCustomScrollbar({
+        theme:'minimal-dark',
+        axis:'y',
+        scrollInertia:1000,
+        autoHideScrollbar: true
+      });
+      $('.st-content').mCustomScrollbar({
+        theme:'minimal-dark',
+        axis:'y',
+        autoExpandScrollbar: true,
+        mouseWheel:{
+          deltaFactor:100,
+          normalizeDelta:true
+        }
+      });
+      var long=$('.long');
+      for(var i=0,len=long.length;i<len;i++){
+        $(long[0].children[0]).addClass('checking-now'+i.toString());
+          jss.set('.st-menu .checking-now'+i.toString()+' div',{
+            'top':(($('.checking-now'+i.toString())[0].clientHeight-10)/2).toString()+'px'
+          });
+      };
+    });
+  </script>
+</html>
