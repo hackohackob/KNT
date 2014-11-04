@@ -15,15 +15,9 @@
     <link rel="stylesheet" href="/stylesheets/demo.css">
     <link rel="stylesheet" href="/stylesheets/icons.css">
     <link rel="stylesheet" href="/stylesheets/component.css">
-    <link rel="stylesheet" href="/icons/flaticon.css">
     <!--link(href='http://fonts.googleapis.com/css?family=Poiret+One|Comfortaa:700&subset=latin,cyrillic' rel='stylesheet' type='text/css')-->
     <link href="http://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <style>
-      .st-content{
-      background-image: url('/images/index-background.jpg');
-      background-size: 100%;
-      background-attachment: fixed;
-      }
       h1{
       font-size:10em;
       font-family: 'Comfortaa';
@@ -34,20 +28,35 @@
       font-family: 'Comfortaa';
       color:white;
       }
-      .content-box{min-heoght:500px;background-color:white; margin-top:0; padding:50px;}
-      .content-box-title{font-family:"Poiret One";  margin-bottom:100px; color:blue; font-size:100px; font-size:6vw; border-bottom:1px solid black;}
-      .content-box-content{ width:100%; color:#000; }
-      .content-box-contet ul { list-style:none;}
-      .flaticon{display:inline-block;font-size:50px; width:20%; border:2px solid gray; border-radius:50%; padding:20px; background-color:gray; color:white; }
-      .flaticon:hover{background-color:#0F5586}
-      .flaticon::before{width:20%; margin:0;}
+      .content-box-blue, .content-box-white {margin-top:0; margin-bottom:300px; padding:50px 0; min-height:120vh;}
+      .content-box-blue-title, .content-box-white-title {font-family:"Poiret One";  margin-bottom:20px; margin-bottom:7vw; font-size:20px; font-size:6vw; position:relative;}
+      .content-box-white{background-color:white; }
+      .content-box-white-title{ color:#0f5586;}
+      .content-box-white-line{min-height:2px; background-color:#0f5586; width:70%; position:absolute; left:0; margin-top:10px;}
+      .content-box-blue{background-color:#0f5586;}
+      .content-box-blue-title{ color:#fff; text-align:right;}
+      .content-box-blue-line{min-height:2px; background-color:white; width:70%; position:absolute; right:0; margin-top:10px;}
+      .content-box-content{font-family:"Poiret One"; width:100%; color:#000; }
+      .content-box-content ul { list-style-type:none; padding:0;}
+      .flaticon{border:1px solid white; width:100%; display:inline-block;font-size:15px; font-size:3.5vw; padding:20px; color:white; background-color:#0F5586; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;}
+      .flaticon:hover{border:1px solid #0F5586; background-color:#fff; color:#0F5586}
+      .flaticon img{width:10%; margin-left:20px; margin-right:20px;}
+      .kst{text-align:right;}
+      .content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:20px; margin:5%; padding:4%; border:4px solid #0F5586; border-radius:10%}
+      .content-box-content .list1 {font-family:"Comfortaa"; margin:2% 5%; font-size:25px; color:#fff; text-align:center;}
+      .content-box-content .list1 li{ border-bottom:1px solid #000; padding:1%;}
+      .content-box-content .list1 li:last-of-type { border-bottom:none;}
+      .content-box-content .list1 a {color:#0F5586; decoration:underline;}
+      .content-box-content .list1 a:hover {color:#0F2556; decoration:underline;}
     </style>
     <script src="/javascripts/jquery-1.11.0.js"></script>
     <script src="http://code.jquery.com/jquery-git2.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/javascripts/modernizr.custom.js"></script>
     <script src="/javascripts/jss.js"></script>
+    <script src="/javascripts/waypoints.min.js"></script>
     <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
+    <script src="/javascripts/jquery.fittext.js"></script>
   </head>
   <body>
     <div id="st-container" class="st-container">
@@ -93,16 +102,47 @@
               </div>
             </header>
             <div class="main clearfix">
-              <div class="content-box">
-                <h2 class="content-box-title">Специалности</h2>
+              <div class="content-box-white">
+                <h2 class="content-box-white-title">Специалности
+                  <div class="content-box-white-line"></div>
+                </h2>
                 <div class="content-box-content">
                   <ul>
                     <li><a href="#">
-                        <div class="flaticon-computer106 flaticon"></div><span>Софтуерни и интернет технологии</span></a></li>
-                    <li>
-                      <div class="flaticon-server1 flaticon"></div><a href="#">Компютърни системи и технологии</a>
-                    </li>
+                        <div class="flaticon"><img src="icons/computer106.png"><span>Софтуерни и интернет технологии</span></div></a></li>
+                    <li><a href="#">
+                        <div class="flaticon kst"><span>Компютърни системи и технологии</span><img src="icons/server1.png"></div></a></li>
                   </ul>
+                  <p>Студентите от специалности СИТ и КСТ се обучават по учебен план, който <b>за първи път в България</b> е изцяло съобразен с <b>международните</b> стандарти за обучение в областта на компютърните технологии. Катедра "КНТ" редовно обновява своите учебни планове, позволявайки по този начин <b>най-новите</b> постижения в областта на компютърните науки и информационните технологии да бъдат своевременно предоставени на студентите. Осъвременяванията на учебните програми се правят на базата на изискванията на пазара на IT специалисти, на най-новите препоръки на <b>IEEE</b> (Световната организация на инженерите по електротехника и електроника) и <b>ACM</b> (Световната асоциация по компютърни машини), както и на текущите академични програми на водещи световни университети.</p>
+                </div>
+              </div>
+              <div id="some" class="content-box-white">
+                <h2 class="content-box-white-title">Връзки
+                  <div class="content-box-white-line"></div>
+                </h2>
+                <div class="content-box-content">
+                  <ul class="list1">
+                    <li><a href="#">Разпис на занятията за ОКС "Магистър", зимен семестър</a></li>
+                    <li><a href="#">Важно! Ново класиране за ОКС "Магистър", спец. "Компютърни системи и технологии" (.pdf)</a></li>
+                    <li><a href="#">Задание за дипломна работа за ОКС "Магистър"</a></li>
+                    <li><a href="#">Образец на задание за дипломна работа за ОКС "Магистър"</a></li>
+                    <li><a href="#">Дневник за производствена практика след 6-ти семестър</a></li>
+                    <li><a href="#">Заповед за специализираща практика за студентите от III к. спец. КСТ, СИТ и КСТ-задочно</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content-box-white">
+                <h2 class="content-box-white-title">Специалности
+                  <div class="content-box-white-line"></div>
+                </h2>
+                <div class="content-box-content">
+                  <ul>
+                    <li><a href="#">
+                        <div class="flaticon"><img src="icons/computer106.png"><span>Софтуерни и интернет технологии</span></div></a></li>
+                    <li><a href="#">
+                        <div class="flaticon kst"><span>Компютърни системи и технологии</span><img src="icons/server1.png"></div></a></li>
+                  </ul>
+                  <p>Студентите от специалности СИТ и КСТ се обучават по учебен план, който за първи път в България е изцяло съобразен с международните стандарти за обучение в областта на компютърните технологии. Катедра "КНТ" редовно обновява своите учебни планове, позволявайки по този начин най-новите постижения в областта на компютърните науки и информационните технологии да бъдат своевременно предоставени на студентите. Осъвременяванията на учебните програми се правят на базата на изискванията на пазара на IT специалисти, на най-новите препоръки на IEEE (Световната организация на инженерите по електротехника и електроника) и ACM (Световната асоциация по компютърни машини), както и на текущите академични програми на водещи световни университети.</p>
                 </div>
               </div>
             </div>
@@ -115,21 +155,21 @@
   <script src="/javascripts/sidebarEffects.js"></script>
   <script>
     $(function(){
-      $('.st-menu').mCustomScrollbar({
-        theme:'minimal-dark',
-        axis:'y',
-        scrollInertia:1000,
-        autoHideScrollbar: true
-      });
-      $('.st-content').mCustomScrollbar({
-        theme:'minimal-dark',
-        axis:'y',
-        autoExpandScrollbar: true,
-        mouseWheel:{
-          deltaFactor:100,
-          normalizeDelta:true
-        }
-      });
+            $('.st-menu').mCustomScrollbar({
+              theme:'minimal-dark',
+              axis:'y',
+              scrollInertia:1000,
+              autoHideScrollbar: true
+            });
+            $('.st-content').mCustomScrollbar({
+              theme:'minimal-dark',
+              axis:'y',
+              autoExpandScrollbar: true,
+              mouseWheel:{
+                deltaFactor:70,
+                normalizeDelta:false
+              }
+            });
       var long=$('.long');
       for(var i=0,len=long.length;i<len;i++){
         $(long[0].children[0]).addClass('checking-now'+i.toString());
@@ -140,10 +180,13 @@
     });
   </script>
   <script>
+    $('#some').waypoint(function(direction){
+    	alert(direction);
+    });
+    
     $(function(){
-    	var height=$('.flaticon').css('height');
-    	alert(height);
-    	$('.flaticon').css('width',height);
+    	$('.content-box-white-title').fitText();
+    	$('.content-box-blue-title').fitText();
     });
   </script>
 </html>

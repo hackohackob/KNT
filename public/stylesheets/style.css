@@ -12,6 +12,7 @@
   color:black;
   font-size:1em;
   font-size:3vw;
+  border:1px solid gray;
 }
 
 #st-trigger-effects button:hover{
@@ -19,12 +20,20 @@
   color:white;
 }
 
+.st-content{
+	background: url('/images/index-background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+}
+
 
 #buffer{
   margin:0;
   padding:20% 10%;
   padding:15vw 11vw;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.2);
 }
 
 

@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="/stylesheets/demo.css">
     <link rel="stylesheet" href="/stylesheets/icons.css">
     <link rel="stylesheet" href="/stylesheets/component.css">
-    <link rel="stylesheet" href="/icons/flaticon.css">
     <link href="http://fonts.googleapis.com/css?family=Poiret+One|Comfortaa:700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <style>
       .st-content{
@@ -39,7 +38,9 @@
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/javascripts/modernizr.custom.js"></script>
     <script src="/javascripts/jss.js"></script>
+    <script src="/javascripts/waypoints.min.js"></script>
     <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
+    <script src="/javascripts/jquery.fittext.js"></script>
   </head>
   <body>
     <div id="st-container" class="st-container">
@@ -100,21 +101,21 @@
   <script src="/javascripts/sidebarEffects.js"></script>
   <script>
     $(function(){
-      $('.st-menu').mCustomScrollbar({
-        theme:'minimal-dark',
-        axis:'y',
-        scrollInertia:1000,
-        autoHideScrollbar: true
-      });
-      $('.st-content').mCustomScrollbar({
-        theme:'minimal-dark',
-        axis:'y',
-        autoExpandScrollbar: true,
-        mouseWheel:{
-          deltaFactor:100,
-          normalizeDelta:true
-        }
-      });
+            $('.st-menu').mCustomScrollbar({
+              theme:'minimal-dark',
+              axis:'y',
+              scrollInertia:1000,
+              autoHideScrollbar: true
+            });
+            $('.st-content').mCustomScrollbar({
+              theme:'minimal-dark',
+              axis:'y',
+              autoExpandScrollbar: true,
+              mouseWheel:{
+                deltaFactor:70,
+                normalizeDelta:false
+              }
+            });
       var long=$('.long');
       for(var i=0,len=long.length;i<len;i++){
         $(long[0].children[0]).addClass('checking-now'+i.toString());

@@ -1,6 +1,6 @@
 {
   "name": "node-express-jade-bootstrap",
-  "version": "0.0.0",
+  "version": "0.0.0-5",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -15,5 +15,9 @@
     "mongoose": "^3.8.18",
     "morgan": "~1.3.0",
     "serve-favicon": "~2.1.3"
+  },
+  "subdomain": "knt",
+  "engines": {
+    "node": "0.10.x"
   }
 }
