@@ -1,0 +1,34 @@
+extends layout
+
+block head-style
+    link(href='http://fonts.googleapis.com/css?family=Poiret+One|Comfortaa:700&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    style
+        |.st-content{
+        |    background-image: url('/images/index-background.jpg');
+        |    background-size: 100%;
+        |    background-attachment: fixed;
+        |}
+        |h1{
+        |font-size:10em;
+        |font-family: 'Comfortaa';
+        |color:white;
+        |}
+        |h3{
+        |font-size:3em;
+        |font-family: 'Comfortaa';
+        |color:white;
+        |}
+block header
+  div(id="buffer")
+      img(id="logo" src="images/logow.png")
+      div(id="heading")
+        h1 Катедра КНТ
+        h3 ТУ - Варна
+block content
+    div(style="min-height:800px; background-color:#0F5586")
+    div(style="min-height:800px; background-color:white")
+    div(style="min-height:800px; background-color:#0F5586")
+    div(style="min-height:800px; background-color:white")
+    div(style="min-height:800px; background-color:#0F5586")
+
+

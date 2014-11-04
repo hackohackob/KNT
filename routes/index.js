@@ -48,12 +48,9 @@ module.exports = function (data) {
             console.log('Path:'+path);
             data.pages.byName(path)
                 .then(function(page){
-                    console.log(page);
                     data.common.inject(page,path)
                         .then(function(page){
-                            //console.log(page1);
-                            console.log(page);
-                            res.render('index1',page);
+                            res.render('index',page);
                         },function(err){
                             res.status(400)
                                 .render('error');

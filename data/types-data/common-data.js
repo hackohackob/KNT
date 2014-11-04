@@ -94,13 +94,12 @@ function deleteByQuery(query) {
 
 function injectCommon(page,path) {
     var promise = new Promise(function (resolve, reject) {
-        console.log(path);
         var commonName;
         switch(path){
             case 'index3':commonName='index3'; break;
             case 'index4':commonName='test4'; break;
         };
-        console.log(commonName);
+
         Common.find({name:commonName}, function (err, common) {
             if (err) {
                 reject(err);
@@ -110,6 +109,7 @@ function injectCommon(page,path) {
                 return;
             }
             common=common[0];
+            console.log('Common:'+common.name);
             if(common.style!=undefined){page.head += common.style;}
             if(common.script.head!=undefined){page.head += common.script[head];}
             if(common.script.finish!=undefined){page.scripts += common.script[finish];}

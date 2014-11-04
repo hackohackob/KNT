@@ -13,7 +13,7 @@ block head-style
 		| font-family: 'Comfortaa';
 		| color:white;
 		| }
-		|.content-box-blue, .content-box-white {margin-top:0; margin-bottom:300px; padding:50px 0; min-height:120vh;}
+		|.content-box-blue, .content-box-white {margin-top:0; border-bottom:5px solid black; padding:50px 0; min-height:120vh;}
 		|.content-box-blue-title, .content-box-white-title {font-family:"Poiret One";  margin-bottom:20px; margin-bottom:7vw; font-size:20px; font-size:6vw; position:relative;}
 		|.content-box-white{background-color:white; }
 		|.content-box-white-title{ color:#0f5586;}
@@ -23,16 +23,20 @@ block head-style
 		|.content-box-blue-line{min-height:2px; background-color:white; width:70%; position:absolute; right:0; margin-top:10px;}
 		|.content-box-content{font-family:"Poiret One"; width:100%; color:#000; }
 		|.content-box-content ul { list-style-type:none; padding:0;}
-		|.flaticon{border:1px solid white; width:100%; display:inline-block;font-size:15px; font-size:3.5vw; padding:20px; color:white; background-color:#0F5586; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;}
+		|.flaticon{border:1px solid white; display:inline-block;font-size:15px; font-size:3.5vw; padding:20px; color:white; background-color:#0F5586; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;}
 		|.flaticon:hover{border:1px solid #0F5586; background-color:#fff; color:#0F5586}
 		|.flaticon img{width:10%; margin-left:20px; margin-right:20px;}
-		|.kst{text-align:right;}
-		|.content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:20px; margin:5%; padding:4%; border:4px solid #0F5586; border-radius:10%}
+		|.kst{float:right; text-align:right;}
+		|.content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:18px; margin:5%; padding:4%; border:4px solid #0F5586; border-radius:10%}
 		|.content-box-content .list1 {font-family:"Comfortaa"; margin:2% 5%; font-size:25px; color:#fff; text-align:center;}
 		|.content-box-content .list1 li{ border-bottom:1px solid #000; padding:1%;}
 		|.content-box-content .list1 li:last-of-type { border-bottom:none;}
-		|.content-box-content .list1 a {color:#0F5586; decoration:underline;}
-		|.content-box-content .list1 a:hover {color:#0F2556; decoration:underline;}
+		|.content-box-content .list1 a {color:#fff; decoration:underline;}
+		|.content-box-content .list1 a:hover {color:#eee; decoration:underline;}
+		|.list2 { font-family:"Comfortaa"; margin:5%; font-size:17px; color:#000}
+		|.white-line{ min-height:2px; width:30%; margin:2% auto; background-color:#105586;}
+		|.content-box-content .ul-show{ list-style-type:circle;}
+		|.content-box-content .ul-show li{ margin-left:4%;}
 block header
 	div(id="buffer")
 		img(id="logo" src="images/logow.png")
@@ -55,10 +59,11 @@ block content
 						div(class="flaticon kst")
 							span Компютърни системи и технологии
 							img(src="icons/server1.png")
+			div(class="clear")
 			p Студентите от специалности СИТ и КСТ се обучават по учебен план, който <b>за първи път в България</b> е изцяло съобразен с <b>международните</b> стандарти за обучение в областта на компютърните технологии. Катедра "КНТ" редовно обновява своите учебни планове, позволявайки по този начин <b>най-новите</b> постижения в областта на компютърните науки и информационните технологии да бъдат своевременно предоставени на студентите. Осъвременяванията на учебните програми се правят на базата на изискванията на пазара на IT специалисти, на най-новите препоръки на <b>IEEE</b> (Световната организация на инженерите по електротехника и електроника) и <b>ACM</b> (Световната асоциация по компютърни машини), както и на текущите академични програми на водещи световни университети.
-	div(class="content-box-white" id="some")
-		h2(class="content-box-white-title") Връзки
-			div(class="content-box-white-line")
+	div(class="content-box-blue" id="some")
+		h2(class="content-box-blue-title") Връзки
+			div(class="content-box-blue-line")
 		div(class="content-box-content")
 			ul(class="list1")
 				li
@@ -73,28 +78,31 @@ block content
 					a(href="#") Дневник за производствена практика след 6-ти семестър
 				li
 					a(href="#") Заповед за специализираща практика за студентите от III к. спец. КСТ, СИТ и КСТ-задочно
+				li
+					a(href="#") Регистрация на випускници за Асоциация на възпитаниците на катедра "Компютърни науки и технологии".
 	div(class="content-box-white" )
-		h2(class="content-box-white-title") Специалности
+		h2(class="content-box-white-title") За сайта
 			div(class="content-box-white-line")
 		div(class="content-box-content")
-			ul
+			ul(class="list2")
+				li Този сайт е направен от Атанас Атанасов, студент 2ри курс в Технически Университет Варна. Сайтът е копие на <a href="http://cs.tu-varna.bg">оригиналния сайт</a> на катедра КНТ към ТУ - Варна. Целта на създаването на тази уеб сайт е промяна и подобряване на дизайна на сайта.
+			div(class="white-line")
+			ul(class="list2")
+				li <b>Сървърна част</b>
 				li
-					a(href="#")
-						div(class="flaticon")
-							img(src="icons/computer106.png")
-							span Софтуерни и интернет технологии
+					|Сървърната част на сайта е написана върху <a href="http://nodejs.org">Node.js</a>, който е javascript език създаден на база V8 - енджинът на Google Chrome. Първоначално Node излиза през 2009г., което го прави сравнително нова технология. Фактът, че е асинхронен и е изграден върху добра и бърза база(V8), прави и самата технология бърза.<br>
+					|Върху технологията Node е изграден framework-a <a href="http://expressjs.com">Express.js</a>. Именно Express.js е използван за сървърната част на този сайт. Express е лек и надежден framework с който можем да изградим Node архитектура на нашия сървър. Express едновременно улеснява, структурира и значително намалява писането на код, при имплементиране на Node.js уеб-сървърно приложение.
+					|Освен това, Express ни позволява използването на шаблонни езици за изграждането на HTML кодът на страницата. Един от тези шаблонни езици е <a href="http://jade-lang.com">Jade</a> и именно той е използван в този уеб сайт.<br>
+					|Цялото Node приложение за този сайт е качено в "облака" <a href="http://nodejitsu.com">nodejitsu</a> и се хоства от nodejitsu.
+				li <br><b>База данни</b>
 				li
-					a(href="#")
-						div(class="flaticon kst")
-							span Компютърни системи и технологии
-							img(src="icons/server1.png")
-			p Студентите от специалности СИТ и КСТ се обучават по учебен план, който за първи път в България е изцяло съобразен с международните стандарти за обучение в областта на компютърните технологии. Катедра "КНТ" редовно обновява своите учебни планове, позволявайки по този начин най-новите постижения в областта на компютърните науки и информационните технологии да бъдат своевременно предоставени на студентите. Осъвременяванията на учебните програми се правят на базата на изискванията на пазара на IT специалисти, на най-новите препоръки на IEEE (Световната организация на инженерите по електротехника и електроника) и ACM (Световната асоциация по компютърни машини), както и на текущите академични програми на водещи световни университети.
+					|Както при повечето по-големи сайтове, така и при този, страниците са динамични и информацията за тях се съхранява в база данни. Малка част от всяка страница на този сайт е статична (навигационното меню и разположението на информацията).
+					|Тази статична част се ползва като шаблон и при заявка към всяка една отделна страница на сайта се прави заявка към базата данни за информацията за тази страница и шаблона се попълва с данните получени от базата данни. <br>
+					|За реализация е използвана базата данни <a href="http://mongodb.org">MongoDB</a>, която е НЕрелационна, документно ориентирана база данни. Базата данни също е в "облака", като за тази цел са използвани услугите на <a href="http://compose.io>Compose</a> "облака"
+					|, който ни позволява да имаме база данни 24/7 без физически сървър и без поддръжка за такъв. Освен тази база данни е направено и още едно копие, което е в "облака" <a href="http://mongolab.com">Mongolab</a> и приложението е направено така, че много лесно да може
+					|да преминава от ползването на едната база данни към другата.
 block end-script
 	script.
-		$('#some').waypoint(function(direction){
-			alert(direction);
-		});
-
 		$(function(){
 			$('.content-box-white-title').fitText();
 			$('.content-box-blue-title').fitText();
