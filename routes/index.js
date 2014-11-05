@@ -10,7 +10,7 @@ module.exports = function (data) {
         .post('/pages', function (req, res) {
             data.pages.savePage(req.body)
                 .then(function(page){
-                    res.send("Done");
+                    res.redirect('/test2');
                 },
                 function(err){
                     res.status(400)
@@ -20,6 +20,10 @@ module.exports = function (data) {
         .get('/test',function(req,res){
             console.log('rendering test');
             res.render('test');
+        })
+        .get('/test2',function(req,res){
+            console.log('rendering test2');
+            res.render('test2');
         })
         .post('/common', function (req, res) {
             console.log('will save common');
@@ -37,7 +41,7 @@ module.exports = function (data) {
                     res.send("Done");
         })
         .get('/',function(req,res){
-            res.redirect('/index3');
+            res.redirect('/index');
         })
         .get('/:path', function (req, res) {
             //console.log(req.params);
