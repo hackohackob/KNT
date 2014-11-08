@@ -1,0 +1,35 @@
+extends layout
+block head-style
+	link(href='https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+	style
+		| h1{font-size:10em; font-family: 'Comfortaa'; color:white; text-align:center;}
+		| .st-pusher .st-content{ background: url("http://nstechnologies.co.in/images/Website-maintenance-by-Xynez-Global-Media.jpg") no-repeat center center fixed; }
+		|.main *{margin:0 auto; text-align:center;}
+		|.content-box-white{background-color:white; padding:50px; }
+		|.content-box-white-title{color:#0f5586;}
+		|.uk-form input {display:block; margin:20px auto;}
+block header
+	div(id="buffer")
+		img(id="logo" src="images/logow.png")
+		div(class="uk-width-large-1-1 uk-visible-large")
+			h1 Страници & Потребители
+block content
+	div(class="content-box-white")
+		div(class="content-box-white-title") Добавяне на страници
+		form(class="uk-form" action="/pages" method="post")
+			fieldset(data-uk-margin)
+				input(type="text" name="_id" placeholder="id")
+				input(type="text" name="name" placeholder="name")
+				input(type="text" name="head" placeholder="head")
+				input(type="text" name="scripts" placeholder="scripts")
+				input(type="text" name="header" placeholder="header")
+				input(type="text" name="content" placeholder="content")
+				input(type="text" name="locals" placeholder="locals")
+				input(type="text" name="dateCreated" placeholder="dateCreated")
+				button(class="uk-button-uk-button-success" type="submit") Изпрати
+block end-script
+	script.
+		$(function(){
+			$('#buffer h1').fitText();
+			$('.content-box-white-title').fitText();
+		});

@@ -4,16 +4,18 @@
   left:0px;
   display:inline-block;
   z-index:1;
+
 }
+
 
 #st-trigger-effects button{
   padding:1.3vw 1.3vw;
-  background: white;
+  background-color: #ecf0f1;
   color:black;
-  font-size:1em;
-  font-size:3vw;
+  font-size:2em;
   border:1px solid gray;
   border-radius: 50%;
+  transition: all 0.5s ease;
 }
 
 #st-trigger-effects button:hover{
@@ -21,6 +23,25 @@
   color:white;
 
 }
+
+#buffer h1{font-size:10em; font-family: 'Comfortaa'; color:white; }
+#buffer h3{ font-size:3em; font-family: 'Comfortaa'; color:white; }
+.content-box-blue, .content-box-white {margin-top:0; padding:50px 0;}
+.content-box-blue-title, .content-box-white-title {font-family:"Poiret One";  margin-bottom:20px; margin-bottom:7vw; font-size:20px; font-size:6vw; text-align:center;}
+.content-box-white{background-color:#ecf0f1; }
+.content-box-white-title{ color:#2980b9;}
+.content-box-blue{background-color:#2980b9;}
+.content-box-blue-title{ color:#ecf0f1;}
+.content-box-content{font-family:"Poiret One"; width:100%; color:#000; }
+.content-box-content ul { list-style-type:none; padding:0;}
+.content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:18px; margin:5%; padding:4%; }
+.content-box-content .list1 {font-family:"Comfortaa"; margin:2% 5%; font-size:17px; color:#fff; text-align:center;}
+.content-box-content .list1 li{ padding:1%;}
+.content-box-content .list1 a {color:#fff; decoration:underline;}
+.content-box-content .list1 a:hover {color:#eee; decoration:underline;}
+.list2 { font-family:"Comfortaa"; margin:5%; font-size:17px; color:#000}
+.content-box-content .ul-show{ list-style-type:circle;}
+.content-box-content .ul-show li{ margin-left:4%;}
 
 .st-content{
 	background: url('/images/index-background.jpg') no-repeat center center fixed;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>КНТ - ТУ Варна</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tu-varna, knt, computers, education, university">
+    <meta name="author" content="hackohackob">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/stylesheets/demo.css">
+    <link rel="stylesheet" href="/stylesheets/icons.css">
+    <link rel="stylesheet" href="/stylesheets/component.css">
+    <link rel="stylesheet" href="/stylesheets/uikit.almost-flat.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <style>
+      h1{font-size:10em; font-family: 'Comfortaa'; color:white; text-align:center;}
+      .st-pusher .st-content{ background: url("http://nstechnologies.co.in/images/Website-maintenance-by-Xynez-Global-Media.jpg") no-repeat center center fixed; }
+      .main *{margin:0 auto; text-align:center;}
+      .content-box-white{background-color:white; padding:50px; }
+      .content-box-white-title{color:#0f5586;}
+      .uk-form input {display:block; margin:20px auto;}
+    </style>
+    <script src="/javascripts/jquery-1.11.0.js"></script>
+    <script src="/javascripts/modernizr.custom.js"></script>
+    <script src="/javascripts/jss.js"></script>
+    <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
+    <script src="/javascripts/jquery.fittext.js"></script>
+    <script src="/javascripts/uikit.min.js"></script>
+  </head>
+  <body>
+    <div id="st-container" class="st-container">
+      <nav id="menu-11" class="st-menu st-effect-11">
+        <!--TODO:-->
+        <h2 class="icon icon-lab">ТУ - Варна</h2>
+        <ul>
+          <li class="menu-list-main"><span class="icon icon-study">Основно меню</span></li>
+          <li><a href="/">Начало</a></li>
+          <li><a href="/uch_proces">Учебен процес</a></li>
+          <li><a href="#">Академичен състав</a></li>
+          <li><a href="#">Научни изследвания</a></li>
+          <li><a href="#">Списание КНТ</a></li>
+          <li><a href="#">Учебни курсове</a></li>
+          <li><a href="#">Научни проекти</a></li>
+          <li><a href="#">Международни проекти</a></li>
+          <li><a href="#">История</a></li>
+          <li><a href="#">Новини</a></li>
+          <li><a href="#" class="menu-list-prev">Връзки и контакти</a></li>
+          <li class="menu-list-main long"><span>
+              <div class="icon icon-study"></div><span>Студентска олимпиада по програмиране</span></span></li>
+          <li><a href="#" class="icon icon-study">Задачи и решения</a></li>
+          <li><a href="#" class="icon icon-study">Снимки</a></li>
+          <li><a href="#" class="icon icon-study menu-list-prev">Архив на PC<sup>2</sup></a></li>
+          <li class="menu-list-main"><span class="icon icon-study">Асоциация на възпитаниците</span></li>
+          <li><a href="#" class="icon icon-study">Регистрация на випускници</a></li>
+          <li class="menu-list-main long"><span>
+              <div class="icon icon-study"></div><span>Втора конференция с международно участие</span></span></li>
+          <li><a href="#" class="icon icon-study">Начало</a></li>
+          <li><a href="#" class="icon icon-study">Организатори</a></li>
+          <li><a href="#" class="icon icon-study">Тематични направления</a></li>
+          <li><a href="#" class="icon icon-study">Оформление</a></li>
+          <li><a href="#" class="icon icon-study">Програма</a></li>
+          <li><a href="#" class="icon icon-study">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="st-pusher">
+        <div class="st-content">
+          <div class="st-content-inner">
+            <div id="st-trigger-effects">
+              <button data-effect="st-effect-11"><span class="uk-icon-bars"></span></button>
+            </div>
+            <header class="header">
+              <div id="buffer"><img id="logo" src="images/logow.png">
+                <div class="uk-width-large-1-1 uk-visible-large">
+                  <h1>Страници & Потребители</h1>
+                </div>
+              </div>
+            </header>
+            <div class="main clearfix">
+              <div class="content-box-white">
+                <div class="content-box-white-title">Добавяне на страници</div>
+                <form action="/pages" method="post" class="uk-form">
+                  <fieldset data-uk-margin>
+                    <input type="text" name="_id" placeholder="id">
+                    <input type="text" name="name" placeholder="name">
+                    <input type="text" name="head" placeholder="head">
+                    <input type="text" name="scripts" placeholder="scripts">
+                    <input type="text" name="header" placeholder="header">
+                    <input type="text" name="content" placeholder="content">
+                    <input type="text" name="locals" placeholder="locals">
+                    <input type="text" name="dateCreated" placeholder="dateCreated">
+                    <button type="submit" class="uk-button-uk-button-success">Изпрати</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/javascripts/classie.js"></script>
+  <script src="/javascripts/sidebarEffects.js"></script>
+  <script>
+    $(function(){
+            $('.st-menu').mCustomScrollbar({
+              theme:'minimal-dark',
+              axis:'y',
+              scrollInertia:1000,
+              autoHideScrollbar: true
+            });
+      var long=$('.long');
+      for(var i=0,len=long.length;i<len;i++){
+        $(long[0].children[0]).addClass('checking-now'+i.toString());
+          jss.set('.st-menu .checking-now'+i.toString()+' div',{
+            'top':(($('.checking-now'+i.toString())[0].clientHeight-10)/2).toString()+'px'
+          });
+      };
+    });
+  </script>
+  <script>
+    $(function(){
+    	$('#buffer h1').fitText();
+    	$('.content-box-white-title').fitText();
+    });
+  </script>
+</html>

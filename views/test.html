@@ -7,52 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="tu-varna, knt, computers, education, university">
     <meta name="author" content="hackohackob">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/demo.css">
     <link rel="stylesheet" href="/stylesheets/icons.css">
     <link rel="stylesheet" href="/stylesheets/component.css">
-    <!--link(href='http://fonts.googleapis.com/css?family=Poiret+One|Comfortaa:700&subset=latin,cyrillic' rel='stylesheet' type='text/css')-->
+    <link rel="stylesheet" href="/stylesheets/uikit.almost-flat.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <style>
-      h1{font-size:10em; font-family: 'Comfortaa'; color:white; }
-      h3{ font-size:3em; font-family: 'Comfortaa'; color:white; }
-      .content-box-blue, .content-box-white {margin-top:0; border-bottom:5px solid black; padding:50px 0;}
-      .content-box-blue-title, .content-box-white-title {font-family:"Poiret One";  margin-bottom:20px; margin-bottom:7vw; font-size:20px; font-size:6vw; position:relative;}
-      .content-box-white{background-color:white; }
-      .content-box-white-title{ color:#0f5586;}
-      .content-box-white-line{min-height:2px; background-color:#0f5586; width:70%; position:absolute; left:0; margin-top:10px;}
-      .content-box-blue{background-color:#0f5586;}
-      .content-box-blue-title{ color:#fff; text-align:right;}
-      .content-box-blue-line{min-height:2px; background-color:white; width:70%; position:absolute; right:0; margin-top:10px;}
+      .content-box-blue, .content-box-white {margin-top:0; padding:50px 0;}
+      .content-box-blue-title, .content-box-white-title {font-family:"Poiret One";  margin-bottom:20px; margin-bottom:7vw; font-size:20px; font-size:6vw; text-align:center;}
+      .content-box-white{background-color:#ecf0f1; }
+      .content-box-white-title{ color:#2980b9;}
+      .content-box-blue{background-color:#2980b9;}
+      .content-box-blue-title{ color:#ecf0f1;}
       .content-box-content{font-family:"Poiret One"; width:100%; color:#000; }
       .content-box-content ul { list-style-type:none; padding:0;}
-      .flaticon{border:1px solid white; display:inline-block;font-size:15px; font-size:3.5vw; padding:20px; color:white; background-color:#0F5586; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;}
-      .flaticon:hover{border:1px solid #0F5586; background-color:#fff; color:#0F5586}
+      .flaticon{border:1px solid white; display:inline-block;font-size:15px; font-size:3.5vw; padding:20px; color:#ecf0f1; background-color:#2980b9; -webkit-transition: all 0.5s ease; transition: all 0.5s ease;}
+      .flaticon:hover{border:1px solid #2980b9; background-color:#ecf0f1; color:#2980b9}
       .flaticon img{width:10%; margin-left:20px; margin-right:20px;}
       .kst{float:right; text-align:right;}
       .content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:18px; margin:5%; padding:4%; }
       .content-box-content .list1 {font-family:"Comfortaa"; margin:2% 5%; font-size:17px; color:#fff; text-align:center;}
-      .content-box-content .list1 li{ border-bottom:1px solid #000; padding:1%;}
-      .content-box-content .list1 li:last-of-type { border-bottom:none;}
+      .content-box-content .list1 li{ padding:1%;}
       .content-box-content .list1 a {color:#fff; decoration:underline;}
       .content-box-content .list1 a:hover {color:#eee; decoration:underline;}
       .list2 { font-family:"Comfortaa"; margin:5%; font-size:17px; color:#000}
-      .white-line{ min-height:2px; width:30%; margin:2% auto; background-color:#105586;}
       .content-box-content .ul-show{ list-style-type:circle;}
       .content-box-content .ul-show li{ margin-left:4%;}
+      .uk-icon-medium{margin-left:15px;}
     </style>
     <script src="/javascripts/jquery-1.11.0.js"></script>
-    <script src="http://code.jquery.com/jquery-git2.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/javascripts/modernizr.custom.js"></script>
     <script src="/javascripts/jss.js"></script>
-    <script src="/javascripts/waypoints.min.js"></script>
     <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
     <script src="/javascripts/jquery.fittext.js"></script>
+    <script src="/javascripts/uikit.min.js"></script>
   </head>
   <body>
     <div id="st-container" class="st-container">
@@ -72,22 +63,28 @@
           <li><a href="#">История</a></li>
           <li><a href="#">Новини</a></li>
           <li><a href="#" class="menu-list-prev">Връзки и контакти</a></li>
-          <li class="menu-list-main long"><a href="#">
-              <div class="icon icon-study"></div><span>Something very long was here, as I can remember as I can rememberas I can rememberas I can remember</span></a></li>
-          <li><a href="#" class="icon icon-study menu-list-prev">Something</a></li>
-          <li class="menu-list-main"><a href="#" class="icon icon-study">Something</a></li>
-          <li><a href="#" class="icon icon-study">Something</a></li>
-          <li><a href="#" class="icon icon-study">Something</a></li>
-          <li><a href="#" class="icon icon-study">Something</a></li>
-          <li><a href="#" class="icon icon-study">Something</a></li>
-          <li><a href="#" class="icon icon-study">Something</a></li>
+          <li class="menu-list-main long"><span>
+              <div class="icon icon-study"></div><span>Студентска олимпиада по програмиране</span></span></li>
+          <li><a href="#" class="icon icon-study">Задачи и решения</a></li>
+          <li><a href="#" class="icon icon-study">Снимки</a></li>
+          <li><a href="#" class="icon icon-study menu-list-prev">Архив на PC<sup>2</sup></a></li>
+          <li class="menu-list-main"><span class="icon icon-study">Асоциация на възпитаниците</span></li>
+          <li><a href="#" class="icon icon-study">Регистрация на випускници</a></li>
+          <li class="menu-list-main long"><span>
+              <div class="icon icon-study"></div><span>Втора конференция с международно участие</span></span></li>
+          <li><a href="#" class="icon icon-study">Начало</a></li>
+          <li><a href="#" class="icon icon-study">Организатори</a></li>
+          <li><a href="#" class="icon icon-study">Тематични направления</a></li>
+          <li><a href="#" class="icon icon-study">Оформление</a></li>
+          <li><a href="#" class="icon icon-study">Програма</a></li>
+          <li><a href="#" class="icon icon-study">Контакти</a></li>
         </ul>
       </nav>
       <div class="st-pusher">
         <div class="st-content">
           <div class="st-content-inner">
             <div id="st-trigger-effects">
-              <button data-effect="st-effect-11"><span class="glyphicon glyphicon-list"></span></button>
+              <button data-effect="st-effect-11"><span class="uk-icon-bars"></span></button>
             </div>
             <header class="header">
               <div id="buffer"><img id="logo" src="images/logow.png">
@@ -99,14 +96,12 @@
             </header>
             <div class="main clearfix">
               <div class="content-box-white">
-                <h2 class="content-box-white-title">Специалности
-                  <div class="content-box-white-line"></div>
-                </h2>
+                <h2 class="content-box-white-title">Специалности</h2>
                 <div class="content-box-content">
                   <ul>
-                    <li><a href="#">
+                    <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=353&amp;Itemid=28">
                         <div class="flaticon"><img src="icons/computer106.png"><span>Софтуерни и интернет технологии</span></div></a></li>
-                    <li><a href="#">
+                    <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=315&amp;Itemid=28">
                         <div class="flaticon kst"><span>Компютърни системи и технологии</span><img src="icons/server1.png"></div></a></li>
                   </ul>
                   <div class="clear"></div>
@@ -114,25 +109,27 @@
                 </div>
               </div>
               <div id="some" class="content-box-blue">
-                <h2 class="content-box-blue-title">Връзки
-                  <div class="content-box-blue-line"></div>
-                </h2>
+                <h2 class="content-box-blue-title">Връзки</h2>
                 <div class="content-box-content">
                   <ul class="list1">
-                    <li><a href="#">Разпис на занятията за ОКС "Магистър", зимен семестър</a></li>
-                    <li><a href="#">Важно! Ново класиране за ОКС "Магистър", спец. "Компютърни системи и технологии" (.pdf)</a></li>
-                    <li><a href="#">Задание за дипломна работа за ОКС "Магистър"</a></li>
-                    <li><a href="#">Образец на задание за дипломна работа за ОКС "Магистър"</a></li>
-                    <li><a href="#">Дневник за производствена практика след 6-ти семестър</a></li>
-                    <li><a href="#">Заповед за специализираща практика за студентите от III к. спец. КСТ, СИТ и КСТ-задочно</a></li>
+                    <li><a target="new" href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=284&amp;Itemid=28">Разпис на занятията за ОКС "Магистър", зимен семестър</a></li>
+                    <hr>
+                    <li><a target="new" href="http://cs.tu-varna.bg/images/stories/magistri_klasirane/priem.pdf">Важно! Ново класиране за ОКС "Магистър", спец. "Компютърни системи и технологии "<i class="uk-icon-medium uk-icon-file-pdf-o"></i></a></li>
+                    <hr>
+                    <li><a target="new" href="http://cs.tu-varna.bg/images/stories/docs/zadanie.mag.pdf">Задание за дипломна работа за ОКС "Магистър"<i data-uk-tooltip title="zadanie_mag.pdf" class="uk-icon-medium uk-icon-file-pdf-o"></i></a></li>
+                    <hr>
+                    <li><a target="new" href="http://cs.tu-varna.bg/images/stories/docs/zadanie.doc">Образец на задание за дипломна работа за ОКС "Магистър"<i data-uk-tooltip title="zadanie.doc" class="uk-icon-medium uk-icon-file-word-o"></i></a></li>
+                    <hr>
+                    <li><a target="new" href="http://cs.tu-varna.bg/images/learning/praktika/dnevnik_praktika.doc">Дневник за производствена практика след 6-ти семестър<i data-uk-tooltip title="dnevnik_praktika.doc" class="uk-icon-medium uk-icon-file-word-o"></i></a></li>
+                    <hr>
+                    <li><span>Заповед за специализираща практика за студентите от III к. спец. КСТ, СИТ и КСТ-задочно<a target="new" href="http://cs.tu-varna.bg/images/docs/zapoved.01.kst.sit1.pdf" data-uk-tooltip title="zapoved.01.kst.sit1.pdf" class="uk-icon-medium uk-icon-file-pdf-o"></a><a target="new" href="http://cs.tu-varna.bg/images/docs/zapoved.zad.2.pdf" data-uk-tooltip title="zapoved.zad.2.pdf" class="uk-icon-medium uk-icon-file-pdf-o"></a></span></li>
+                    <hr>
                     <li><a href="#">Регистрация на випускници за Асоциация на възпитаниците на катедра "Компютърни науки и технологии".</a></li>
                   </ul>
                 </div>
               </div>
               <div class="content-box-white">
-                <h2 class="content-box-white-title">За сайта
-                  <div class="content-box-white-line"></div>
-                </h2>
+                <h2 class="content-box-white-title">За сайта</h2>
                 <div class="content-box-content">
                   <ul class="list2">
                     <li>Този сайт е направен от Атанас Атанасов, студент 2ри курс в Технически Университет Варна. Сайтът е копие на <a href="http://cs.tu-varna.bg">оригиналния сайт</a> на катедра КНТ към ТУ - Варна. Целта на създаването на тази уеб сайт е промяна и подобряване на дизайна на сайта.</li>
@@ -144,7 +141,7 @@
                       Сървърната част на сайта е написана върху <a href="http://nodejs.org">Node.js</a>, който е javascript език създаден на база V8 - енджинът на Google Chrome. Първоначално Node излиза през 2009г., което го прави сравнително нова технология. Фактът, че е асинхронен и е изграден върху добра и бърза база(V8), прави и самата технология бърза.<br>
                       Върху технологията Node е изграден framework-a <a href="http://expressjs.com">Express.js</a>. Именно Express.js е използван за сървърната част на този сайт. Express е лек и надежден framework с който можем да изградим Node архитектура на нашия сървър. Express едновременно улеснява, структурира и значително намалява писането на код, при имплементиране на Node.js уеб-сървърно приложение.
                       Освен това, Express ни позволява използването на шаблонни езици за изграждането на HTML кодът на страницата. Един от тези шаблонни езици е <a href="http://jade-lang.com">Jade</a> и именно той е използван в този уеб сайт.<br>
-                      Цялото Node приложение за този сайт е качено в "облака" <a href="http://nodejitsu.com">nodejitsu</a> и се хоства от nodejitsu.
+                      Цялото Node приложение за този сайт е качено в "облака" и се хоства от <a href="http://heroku.com">heroku</a>.
                     </li>
                     <li><br><b>База данни</b></li>
                     <li>
@@ -173,14 +170,6 @@
               scrollInertia:1000,
               autoHideScrollbar: true
             });
-      //            $('.st-content').mCustomScrollbar({
-      //              theme:'minimal-dark',
-      //              axis:'y',
-      //              autoExpandScrollbar: true,
-      //              mouseWheel:{
-      //                deltaFactor:50
-      //              }
-      //            });
       var long=$('.long');
       for(var i=0,len=long.length;i<len;i++){
         $(long[0].children[0]).addClass('checking-now'+i.toString());
@@ -188,12 +177,6 @@
             'top':(($('.checking-now'+i.toString())[0].clientHeight-10)/2).toString()+'px'
           });
       };
-    });
-  </script>
-  <script>
-    $(function(){
-    	$('.content-box-white-title').fitText();
-    	$('.content-box-blue-title').fitText();
     });
   </script>
 </html>

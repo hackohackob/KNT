@@ -22,8 +22,6 @@ function save(page) {
 }
 
 function savePage(body) {
-    console.log('Preparing to save ');
-    console.log(body);
     var promise = new Promise(function (resolve, reject) {
         var pageToSave={
             id:body.id,
@@ -44,6 +42,33 @@ function savePage(body) {
 
             resolve(dbData[0]);
         })
+    });
+
+    return promise;
+}
+
+function updatePage(body) {
+    var promise = new Promise(function (resolve, reject) {
+
+        var pageToSave={
+            name:body.name,
+            head:body.head,
+            scripts:body.scripts,
+            header:body.header,
+            content:body.content,
+            locals:body.locals,
+            dateCreated:body.dateCreated
+        };
+        Page.update({name:body.name},pageToSave,{},function(err,dbData){
+            console.log(err);
+            console.log(dbData);
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            resolve(dbData);
+        });
     });
 
     return promise;
@@ -117,6 +142,7 @@ module.exports ={
         byId: getById,
         byName:getByName,
         delQuery:deleteByQuery,
-        savePage:savePage
+        savePage:savePage,
+        updatePage:updatePage
     }
 };

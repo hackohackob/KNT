@@ -7,24 +7,21 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="keywords" content="tu-varna, knt, computers, education, university")
     meta(name="author" content="hackohackob")
-    link(rel='stylesheet' href='/bootstrap/css/bootstrap.min.css')
-    link(rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
     link(rel='stylesheet' href='/stylesheets/style.css')
     link(rel='stylesheet' href='/stylesheets/jquery.mCustomScrollbar.css')
     link(rel='stylesheet' href='/stylesheets/normalize.css')
     link(rel='stylesheet' href='/stylesheets/demo.css')
     link(rel='stylesheet' href='/stylesheets/icons.css')
     link(rel='stylesheet' href='/stylesheets/component.css')
+    link(rel='stylesheet' href='/stylesheets/uikit.almost-flat.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&subset=latin,cyrillic' rel='stylesheet' type='text/css')
     block head-style
     script(src='/javascripts/jquery-1.11.0.js')
-    script(src='http://code.jquery.com/jquery-git2.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
     script(src='/javascripts/modernizr.custom.js')
     script(src='/javascripts/jss.js')
-    script(src='/javascripts/waypoints.min.js')
     script(src='/javascripts/jquery.mCustomScrollbar.js')
     script(src='/javascripts/jquery.fittext.js')
-    block head-script
+    script(src='/javascripts/uikit.min.js')
   body
     div(id="st-container" class="st-container")
       nav(class="st-menu st-effect-11" id="menu-11")
@@ -56,29 +53,41 @@ html
           li
             a(class="menu-list-prev" href="#") Връзки и контакти
           li(class="menu-list-main long")
-            a( href="#")
+            span
               div(class="icon icon-study")
-              span Something very long was here, as I can remember as I can rememberas I can rememberas I can remember
+              span Студентска олимпиада по програмиране
           li
-            a(class="icon icon-study menu-list-prev" href="#") Something
+            a(class="icon icon-study" href="#") Задачи и решения
+          li
+            a(class="icon icon-study" href="#") Снимки
+          li
+            a(class="icon icon-study menu-list-prev" href="#") Архив на PC<sup>2</sup>
           li.menu-list-main
-            a(class="icon icon-study" href="#") Something
+            span(class="icon icon-study" ) Асоциация на възпитаниците
           li
-            a(class="icon icon-study" href="#") Something
+            a(class="icon icon-study" href="#") Регистрация на випускници
+          li(class="menu-list-main long")
+            span
+              div(class="icon icon-study")
+              span Втора конференция с международно участие
           li
-            a(class="icon icon-study" href="#") Something
+            a(class="icon icon-study" href="#") Начало
           li
-            a(class="icon icon-study" href="#") Something
+            a(class="icon icon-study" href="#") Организатори
           li
-            a(class="icon icon-study" href="#") Something
+            a(class="icon icon-study" href="#") Тематични направления
           li
-            a(class="icon icon-study" href="#") Something
+            a(class="icon icon-study" href="#") Оформление
+          li
+            a(class="icon icon-study" href="#") Програма
+          li
+            a(class="icon icon-study" href="#") Контакти
       div(class="st-pusher")
         div(class="st-content")
           div(class="st-content-inner")
             div(id='st-trigger-effects')
               button(data-effect='st-effect-11')
-                span(class="glyphicon glyphicon-list")
+                span(class="uk-icon-bars")
             header(class="header")
               block header
             div(class="main clearfix")
@@ -93,14 +102,6 @@ html
               scrollInertia:1000,
               autoHideScrollbar: true
             });
-      //            $('.st-content').mCustomScrollbar({
-      //              theme:'minimal-dark',
-      //              axis:'y',
-      //              autoExpandScrollbar: true,
-      //              mouseWheel:{
-      //                deltaFactor:50
-      //              }
-      //            });
       var long=$('.long');
       for(var i=0,len=long.length;i<len;i++){
         $(long[0].children[0]).addClass('checking-now'+i.toString());

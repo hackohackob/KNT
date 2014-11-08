@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
 var router = express.Router();
 var jade = require('jade');
 
@@ -10,7 +11,7 @@ module.exports = function (data) {
         .post('/pages', function (req, res) {
             data.pages.savePage(req.body)
                 .then(function(page){
-                    res.redirect('/test2');
+                    res.redirect('/admin');
                 },
                 function(err){
                     res.status(400)
@@ -25,9 +26,28 @@ module.exports = function (data) {
             console.log('rendering test2');
             res.render('test2');
         })
+        .get('/change/:name',function(req,res){
+            console.log('update '+ req.param('name'));
+            data.pages.byName(req.param('name'))
+                .then(function(page){
+                    console.log(page);
+                    res.render('update',page);
+                },function(err){
+                    res.status(404)
+                        .render('error');
+                })
+        })
+        .post('/change', function (req, res) {
+            data.pages.updatePage(req.body)
+                .then(function(page){
+                    res.redirect('/admin');
+                },
+                function(err){
+                    res.status(400)
+                        .json(err);
+                });
+        })
         .post('/common', function (req, res) {
-            console.log('will save common');
-            console.log(req.body);
             data.common.save(req.body)
                 .then(function(page){
                     res.send("Done");
@@ -37,14 +57,21 @@ module.exports = function (data) {
                         .json(err);
                 });
         })
-        .post('/custom', function (req, res) {
-                    res.send("Done");
+        .get('/admin',function(req,res){
+            if(req.cookies.TU=='qazwsx'){
+                res.render('admin');
+            } else {
+                res.render('error');
+            }
+        })
+        .get('/deletePages', function (req, res) {
+            data.pages.delQuery({})
+                .then();
         })
         .get('/',function(req,res){
             res.redirect('/index');
         })
         .get('/:path', function (req, res) {
-            //console.log(req.params);
             var path=req.path;
             if(path[0]==='/'){
                 path=path.slice(1);
