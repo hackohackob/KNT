@@ -9,14 +9,18 @@ module.exports = function (data) {
 
     router
         .post('/pages', function (req, res) {
-            data.pages.savePage(req.body)
-                .then(function(page){
-                    res.redirect('/admin');
-                },
-                function(err){
-                    res.status(400)
-                        .json(err);
-                });
+            if(req.cookies.TU=='qazwsx') {
+                data.pages.savePage(req.body)
+                    .then(function (page) {
+                        res.redirect('/admin');
+                    },
+                    function (err) {
+                        res.status(400)
+                            .json(err);
+                    });
+            }else {
+                res.render('error');
+            }
         })
         .get('/test',function(req,res){
             console.log('rendering test');
@@ -38,24 +42,32 @@ module.exports = function (data) {
                 })
         })
         .post('/change', function (req, res) {
-            data.pages.updatePage(req.body)
-                .then(function(page){
-                    res.redirect('/admin');
-                },
-                function(err){
-                    res.status(400)
-                        .json(err);
-                });
+            if(req.cookies.TU=='qazwsx') {
+                data.pages.updatePage(req.body)
+                    .then(function (page) {
+                        res.redirect('/admin');
+                    },
+                    function (err) {
+                        res.status(400)
+                            .json(err);
+                    });
+            }else {
+                res.render('error');
+            }
         })
         .post('/common', function (req, res) {
-            data.common.save(req.body)
-                .then(function(page){
-                    res.send("Done");
-                },
-                function(err){
-                    res.status(400)
-                        .json(err);
-                });
+            if(req.cookies.TU=='qazwsx') {
+                data.common.save(req.body)
+                    .then(function (page) {
+                        res.send("Done");
+                    },
+                    function (err) {
+                        res.status(400)
+                            .json(err);
+                    });
+            }else {
+                res.render('error');
+            }
         })
         .get('/admin',function(req,res){
             if(req.cookies.TU=='qazwsx'){
