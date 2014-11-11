@@ -9,6 +9,7 @@ block head-style
 		| .content-box-white-title{color:#0f5586;}
 		| .uk-form input {display:block; margin:20px auto;}
 		| .uk-form textarea {display:block; width:90%; margin:20px auto; box-sizing:border-box;}
+		|fieldset {color: #000; font-size:16px}
 block header
 	div(id="buffer")
 		img(id="logo" src="/images/logow.png")
@@ -19,12 +20,19 @@ block content
 		div(class="content-box-white-title") Промяна на страница #{name}
 		form(class="uk-form" action="/change" method="post")
 			fieldset(data-uk-margin)
+				|name
 				input(type="text" name="name" value=name)
+				|head
 				textarea(type="text" name="head") !{head}
+				|scripts
 				textarea(id="script" type="text" name="scripts") !{scripts}
+				|header
 				textarea(type="text" name="header") !{header}
+				|content
 				textarea(id="first" type="text" name="content") !{content}
+				|locals
 				textarea(type="text" name="locals") !{locals.locals}
+				|dateCreated
 				input(type="text" name="dateCreated" value=dateCreated)
 				button(class="uk-button-uk-button-success" type="submit") Изпрати
 block end-script

@@ -24,6 +24,7 @@
       .content-box-white-title{color:#0f5586;}
       .uk-form input {display:block; margin:20px auto;}
       .uk-form textarea {display:block; width:90%; margin:20px auto; box-sizing:border-box;}
+      fieldset {color: #000; font-size:16px}
     </style>
     <script src="/javascripts/jquery-1.11.0.js"></script>
     <script src="/javascripts/modernizr.custom.js"></script>
@@ -84,13 +85,13 @@
               <div class="content-box-white">
                 <div class="content-box-white-title">Промяна на страница </div>
                 <form action="/change" method="post" class="uk-form">
-                  <fieldset data-uk-margin>
-                    <input type="text" name="name">
-                    <textarea type="text" name="head"></textarea>
-                    <textarea id="script" type="text" name="scripts"></textarea>
-                    <textarea type="text" name="header"></textarea>
-                    <textarea id="first" type="text" name="content"></textarea>
-                    <textarea type="text" name="locals"></textarea>
+                  <fieldset data-uk-margin>name
+                    <input type="text" name="name">head
+                    <textarea type="text" name="head"></textarea>scripts
+                    <textarea id="script" type="text" name="scripts"></textarea>header
+                    <textarea type="text" name="header"></textarea>content
+                    <textarea id="first" type="text" name="content"></textarea>locals
+                    <textarea type="text" name="locals"></textarea>dateCreated
                     <input type="text" name="dateCreated">
                     <button type="submit" class="uk-button-uk-button-success">Изпрати</button>
                   </fieldset>
