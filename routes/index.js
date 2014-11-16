@@ -3,6 +3,8 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var router = express.Router();
 var jade = require('jade');
+var beautifyHtml = require('js-beautify').html;
+var beautifyJs = require('js-beautify');
 
 module.exports = function (data) {
     var router = express.Router();
@@ -31,15 +33,24 @@ module.exports = function (data) {
             res.render('test2');
         })
         .get('/change/:name',function(req,res){
-            console.log('update '+ req.param('name'));
-            data.pages.byName(req.param('name'))
-                .then(function(page){
-                    console.log(page);
-                    res.render('update',page);
-                },function(err){
-                    res.status(404)
-                        .render('error');
-                })
+            if(req.cookies.TU=='qazwsx') {
+                console.log('update ' + req.param('name'));
+                data.pages.byName(req.param('name'))
+                    .then(function (page) {
+
+                        page.head=beautifyHtml(page.head);
+                        page.scripts=beautifyHtml(page.scripts);
+                        page.scripts=beautifyJs(page.scripts);
+                        page.header=beautifyHtml(page.header);
+                        page.content=beautifyHtml(page.content);
+                        res.render('update', page);
+                    }, function (err) {
+                        res.status(404)
+                            .render('error');
+                    })
+            }else {
+                res.render('error');
+            }
         })
         .post('/change', function (req, res) {
             if(req.cookies.TU=='qazwsx') {
@@ -75,6 +86,9 @@ module.exports = function (data) {
             } else {
                 res.render('error');
             }
+        })
+        .post('/admin/7809',function(req,res){
+            res.cookie("TU","qazwsx",{})
         })
         .get('/deletePages', function (req, res) {
             data.pages.delQuery({})
