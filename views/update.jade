@@ -1,6 +1,5 @@
 extends layout
 block head-style
-	link(rel="stylesheet" href="/stylesheets/codemirror.css")
 	style
 		| h1{font-size:10em; font-family: 'Comfortaa'; color:white; text-align:center;}
 		| .st-pusher .st-content{ background: url("http://nstechnologies.co.in/images/Website-maintenance-by-Xynez-Global-Media.jpg") no-repeat center center fixed; }
@@ -9,7 +8,7 @@ block head-style
 		| .content-box-white-title{color:#0f5586;}
 		| .uk-form input {display:block; margin:20px auto; }
 		| .uk-form textarea {display:block; width:90%; margin:20px auto; box-sizing:border-box; text-align:left; }
-		|fieldset {color: #000; font-size:20px;}
+		|fieldset {color: #000; }
 block header
 	div(id="buffer")
 		img(id="logo" src="/images/logow.png")
@@ -20,24 +19,23 @@ block content
 		div(class="content-box-white-title") Промяна на страница #{name}
 		form(class="uk-form" action="/change" method="post")
 			fieldset(data-uk-margin)
-				|name
+				div(class="uk-badge") name
 				input(type="text" name="name" value=name)
-				|head
+				div(class="uk-badge") head
 				textarea(type="text" name="head") !{head}
-				|scripts
+				div(class="uk-badge") scripts
 				textarea(id="script" type="text" name="scripts") !{scripts}
-				|header
+				div(class="uk-badge") header
 				textarea(type="text" name="header") !{header}
-				|content
+				div(class="uk-badge") content
 				textarea(id="first" type="text" name="content") !{content}
-				|locals
+				div(class="uk-badge") locals
 				textarea(type="text" name="locals") !{locals.locals}
-				|dateCreated
+				div(class="uk-badge") dateCreated
 				input(type="text" name="dateCreated" value=dateCreated)
 				button(class="uk-button-uk-button-success" type="submit") Изпрати
 block end-script
 	script(src="/javascripts/jquery.autosize.js")
-	script(src="/javascripts/codemirror.js")
 	script.
 		$(function(){
 			$('textarea').autosize();

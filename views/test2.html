@@ -8,28 +8,75 @@
     <meta name="keywords" content="tu-varna, knt, computers, education, university">
     <meta name="author" content="hackohackob">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/demo.css">
     <link rel="stylesheet" href="/stylesheets/icons.css">
     <link rel="stylesheet" href="/stylesheets/component.css">
     <link rel="stylesheet" href="/stylesheets/uikit.almost-flat.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <style>
-      h1{font-size:10em; font-family: 'Comfortaa'; color:white; }
+      #buffer #heading h1{font-size:8vw; font-family: 'Comfortaa'; color:white; }
       .st-pusher .st-content{ background: url("http://nstechnologies.co.in/images/Website-maintenance-by-Xynez-Global-Media.jpg") no-repeat center center fixed; }
-      .content-box-blue, .content-box-white {margin-top:0; border-bottom:5px solid black; padding:50px 0;}
-      .content-box-blue-title, .content-box-white-title {font-family:"Poiret One";  margin-bottom:20px; margin-bottom:7vw; font-size:20px; font-size:6vw; position:relative;}
-      .content-box-white{background-color:white; }
-      .content-box-white-title{ color:#0f5586;}
-      .content-box-white-line{min-height:2px; background-color:#0f5586; width:70%; float:left; margin-top:10px;}
+      .uk-panel h3 {text-align:center;}
+      .uk-panel a{text-decoration:underline;}
+      .content-box-white>.uk-panel{margin:20px; margin-bottom:0px; margin-top:50px; padding-top:20px; padding-bottom:30px;}
+      .uk-panel{margin:20px;}
+      .uk-panel .uk-panel { margin-bottom:10px; }
+      .uk-panel .uk-panel span {color:#07d }
+      .uk-width-1-1{font-size:30px; text-align:center; margin-top:30px;}
+      .uk-width-1-1 i{margin-left:10px;}
+      .uk-width-1-1 a{color:black;  }
+      .effect1, .effect2 {
+      	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      }
+      .effect1:before, .effect2:before,
+      .effect1:before, .effect2:after {
+      	content:"";
+      	position:absolute;
+      	z-index:-2;
+      }
+      .effect1{
+      		padding:30px;
+      		-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      		-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      		box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      }
+      .effect2 {
+      		border:1px solid #efefef;
+      	-moz-border-radius:0 0 120px 120px / 0 0 6px 6px;
+      	border-radius:0 0 120px 120px / 0 0 6px 6px;
+      }
+      .effect2:before,
+      .effect2:after {
+      	bottom:12px;
+      	left:10px;
+      	width:50%;
+      height:55%;
+      max-width:200px;
+      	max-height:100px;
+      	-webkit-box-shadow:0 8px 12px rgba(0, 0, 0, 0.5);
+      	-moz-box-shadow:0 8px 12px rgba(0, 0, 0, 0.5);
+      	box-shadow:0 8px 12px rgba(0, 0, 0, 0.5);
+      -webkit-transform:skew(-8deg) rotate(-3deg);
+      -moz-transform:skew(-8deg) rotate(-3deg);
+      -ms-transform:skew(-8deg) rotate(-3deg);
+      -o-transform:skew(-8deg) rotate(-3deg);
+      transform:skew(-8deg) rotate(-3deg);
+      }
+      .effect2:after {
+      right:10px;
+      	left:auto;
+      	-webkit-transform:skew(8deg) rotate(3deg);
+      	-moz-transform:skew(8deg) rotate(3deg);
+      	-ms-transform:skew(8deg) rotate(3deg);
+      	-o-transform:skew(8deg) rotate(3deg);
+      	transform:skew(8deg) rotate(3deg);
+      }
     </style>
     <script src="/javascripts/jquery-1.11.0.js"></script>
-    <script src="/javascripts/modernizr.custom.js"></script>
-    <script src="/javascripts/jss.js"></script>
-    <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
-    <script src="/javascripts/jquery.fittext.js"></script>
-    <script src="/javascripts/uikit.min.js"></script>
   </head>
   <body>
     <div id="st-container" class="st-container">
@@ -76,24 +123,232 @@
               <div class="blur"></div>
               <div id="buffer"><img id="logo" src="images/logow.png">
                 <div id="heading">
-                  <h1>Страници & Потребители</h1>
+                  <h1>Софтуерни и интернет технологии</h1>
                 </div>
               </div>
             </header>
             <div class="main clearfix">
               <div class="content-box-white">
-                <div class="content-box-white-title">Добавяне</div>
-                <div class="content-box-white-line"></div>
-                <div class="content-box-white-content clear">
-                  <ul role="tablist" class="nav nav-tabs nav-justified">
-                    <li role="presentation" class="active"><a href="#" data-toggle="pill">Страница</a></li>
-                    <li role="presentation"><a href="#" data-toggle="pill">Потребителgit</a></li>
-                  </ul>
-                  <form action="/pages" method="post"><span>Id</span>
-                    <input name="id"><span>Name</span>
-                    <input name="name">
-                    <button type="symbit">Изпрати</button>
-                  </form>
+                <div class="content-box-white-title">Учебен план на специалност "Софтуерни и интернет технологии"</div>
+                <div class="content-box-content clear">
+                  <p>Катедра “Компютърни науки и технологии” предлага от 2011 г. четири годишно редовно обучение за придобиване на образователно-квалификационна степен “Бакалавър” по специалността “Софтуерни и интернет технологии” по учебен план, изцяло съобразен с международните стандарти за обучение в областта на софтуерните технологии.</p>
+                </div>
+                <div class="uk-panel effect2">
+                  <h3 class="uk-panel-title">1 година</h3>
+                  <div class="uk-grid">
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1">
+                        <h3 class="uk-panel-title">1 семестър</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=175&amp;Itemid=28">Базова математика за инжинери</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=176&amp;Itemid=28">Английски език</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=226&amp;Itemid=28">WEB дизайн</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=227&amp;Itemid=28">Програмиране и използване на компютри (1 част)</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=228&amp;Itemid=28">Електротехника</a></li>
+                          <li><span>Икономика на софтуерното производство</span></li>
+                          <li><span>Избираема дисциплина</span>
+                            <ul class="uk-list">
+                              <li><span>Обща спортна подготовка</span></li>
+                              <li><span>Специализиране спортна подготовка</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1">
+                        <h3 class="uk-panel-title ">2 семестър</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=230&amp;Itemid=28">Висша математика за компютърни науки (1 част)</a></li>
+                          <li><span>Графичен дизайн</span></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=232&amp;Itemid=28">Програмиране и използване на компютри (1 част)</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=233&amp;Itemid=28">Синтез и анализ на алгоритми</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=234&amp;Itemid=28">Анализ и синтез на логически схеми</a></li>
+                          <li><span>Избираема дисциплина</span>
+                            <ul class="uk-list">
+                              <li><span>Обща спортна подготовка</span></li>
+                              <li><span>Специализиране спортна подготовка</span></li>
+                            </ul>
+                          </li>
+                          <li><span>Учебна практика</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel effect2">
+                  <h3 class="uk-panel-title">2 година</h3>
+                  <div class="uk-grid">
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1">
+                        <h3 class="uk-panel-title">1 семестър</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=220&amp;Itemid=28">Висша математика за компютърни науки (2 част)</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=221&amp;Itemid=28">Системен анализ</a></li>
+                          <li><span>Управление на данните</span></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=223&amp;Itemid=28">Обектно-ориентирано програмиране (1 част C++)</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=224&amp;Itemid=28">Организация на компютъра и компютърни архитектури</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=225&amp;Itemid=28">Синтез и анализ на алгоритми (проект)</a></li>
+                          <li><span>Избираема дисциплина</span>
+                            <ul class="uk-list">
+                              <li><span>Обща спортна подготовка</span></li>
+                              <li><span>Специализиране спортна подготовка</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1">
+                        <h3 class="uk-panel-title ">2 семестър</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=235&amp;Itemid=28">Обектно-ориентирано програмиране (2 част Java)</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=215&amp;Itemid=28">Дискретни структури</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=216&amp;Itemid=28">Микропроцесорна техника</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=217&amp;Itemid=28">Програмни системи</a></li>
+                          <li><span>Графични системи</span></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=219&amp;Itemid=28">Обектно-ориентирано програмиране (1 част проект)</a></li>
+                          <li><span>Избираема дисциплина</span>
+                            <ul class="uk-list">
+                              <li><span>Обща спортна подготовка</span></li>
+                              <li><span>Специализиране спортна подготовка</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel effect2">
+                  <h3 class="uk-panel-title">3 година</h3>
+                  <div class="uk-grid">
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1 equal1">
+                        <h3 class="uk-panel-title ">1 семестър</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><span>Принципи на операционните системи</span></li>
+                          <li><span>Програмни спецификации</span></li>
+                          <li><span>Системи с бази данни</span></li>
+                          <li><span>Компютърни мрежи и интернет</span></li>
+                          <li><span>Технология на софтуерното производство</span></li>
+                          <li><span>Курсов проект по избор</span>
+                            <ul class="uk-list">
+                              <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=211&amp;Itemid=28">Дискретни структури</a></li>
+                              <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=212&amp;Itemid=28">Обектно-ориентирано програмиране (2 част)</a></li>
+                              <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=214&amp;Itemid=28">Микропроцесорна техника</a></li>
+                              <li><span>Графични системи</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1 equal1b">
+                        <h3 class="uk-panel-title ">2 семестър</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><span>Системно програмиране</span></li>
+                          <li><a href="http://cs.tu-varna.bg/images/anotacii_sit/aisu.pdf">Интернет сървъри и услуги</a></li>
+                          <li><a href="http://cs.tu-varna.bg/images/anotacii_sit/project_management_bg.pdf">Управление на софтуерни проекти</a></li>
+                          <li><span>Програмиране на мобилни интернет устройства</span></li>
+                          <li><span>Интернет технологии</span></li>
+                          <li><span>Курсов проект по избор</span>
+                            <ul class="uk-list">
+                              <li><span>Принципи на операционните системи</span></li>
+                              <li><span>Компютърни мрежи и интернет</span></li>
+                              <li><span>Технология на софтуерното производство</span></li>
+                              <li><span>Системи с бази данни</span></li>
+                            </ul>
+                          </li>
+                          <li><span>Специализираща практика</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel effect2">
+                  <h3 class="uk-panel-title">4 година</h3>
+                  <div class="uk-grid">
+                    <div class="uk-width-medium-1-2 ">
+                      <div class="uk-panel effect1 ">
+                        <h3 class="uk-panel-title ">1 семестър</h3>
+                        <ul class="uk-list uk-list-line equal3b">
+                          <li><span>Мрежово администриране</span></li>
+                          <li><span>Езикови процесори</span></li>
+                          <li><span>Разпределена обработка в интернет</span></li>
+                          <li><a href="http://cs.tu-varna.bg/images/anotacii_sit/hci.pdf">Проектиране на потребителски интерфейс</a></li>
+                          <li><span>Извличане на информация в интернет</span></li>
+                          <li><span>Лабораторен практикум (избираеми дисциплини от 3година, 2семестър)</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2 ">
+                      <div class="uk-panel effect1 ">
+                        <h3 class="uk-panel-title ">2 семестър</h3>
+                        <ul class="uk-list uk-list-line equal3">
+                          <li><span>Избираема дисциплина от група A или B</span></li>
+                          <li><span>Избираема дисциплина от група A или C</span></li>
+                          <li><span>Избираема дисциплина от група B или C</span></li>
+                          <li><span>Избираема дисциплина от група A или B или C</span></li>
+                          <li><span>Преддипломен проект</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-panel effect2">
+                  <h3 class="uk-panel-title">Избираеми дисциплини</h3>
+                  <div class="uk-grid">
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1 equal2">
+                        <h3 class="uk-panel-title ">Група А</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=179&amp;Itemid=28">Офис системи</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=180&amp;Itemid=28">Изкуствен интелект</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=181&amp;Itemid=28">Криптография и защита на данните</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=182&amp;Itemid=28">Икономика и мениджмънт</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1 equal2">
+                        <h3 class="uk-panel-title ">Група B</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=183&amp;Itemid=28">Едночиповин микроконтролери</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=184&amp;Itemid=28">Мултимедийни системи и технологии</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=186&amp;Itemid=28">Обектно-ориентирани приложения</a></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=187&amp;Itemid=28">Проектиране на WEB програмни приложения</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1 equal2">
+                        <h3 class="uk-panel-title ">Група C</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><span>Проектиране на информационни системи</span></li>
+                          <li><span>Методи за разпознаване на образи</span></li>
+                          <li><span>Еволюция и качество на софтуер</span></li>
+                          <li><a href="http://cs.tu-varna.bg/index.php?option=com_content&amp;task=view&amp;id=274&amp;Itemid=28">Електронна търговия</a></li>
+                          <li><span>Информационен мениджмънт</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="uk-width-medium-1-2">
+                      <div class="uk-panel effect1 equal2b">
+                        <h3 class="uk-panel-title ">Факултативни дисциплини</h3>
+                        <ul class="uk-list uk-list-line">
+                          <li><span>Екология</span></li>
+                          <li><span>Авторско право</span></li>
+                          <li><span>Фирмено счетоводство</span></li>
+                          <li><span>Издателски системи</span></li>
+                          <li><span>Философия</span></li>
+                          <li><span>Компютърен английски език</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-grid">
+                  <div class="uk-width-1-1"><a href="http://www.tu-varna.bg/tu-varnaumo/images/stories/uchebni_planove/bak_mag_sled_sredno/sit_br.pdf">Учебен план<i data-uk-tooltip title="sit.pdf" class="uk-icon-medium uk-icon-file-pdf-o"></i></a></div>
                 </div>
               </div>
             </div>
@@ -104,6 +359,11 @@
   </body>
   <script src="/javascripts/classie.js"></script>
   <script src="/javascripts/sidebarEffects.js"></script>
+  <script src="/javascripts/modernizr.custom.js"></script>
+  <script src="/javascripts/jss.js"></script>
+  <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
+  <script src="/javascripts/jquery.fittext.js"></script>
+  <script src="/javascripts/uikit.min.js"></script>
   <script>
     $(function(){
             $('.st-menu').mCustomScrollbar({
@@ -119,6 +379,22 @@
             'top':(($('.checking-now'+i.toString())[0].clientHeight-10)/2).toString()+'px'
           });
       };
+    });
+  </script>
+  <script>
+    $(function(){
+    	var height1=$('.equal1b').css('height');
+    	jss.set('.equal1',{'height':height1});
+    	var height2=$('.equal2b').css('height');
+    	jss.set('.equal2',{'height':height2});
+    	//var _3b=$('.equal3b');
+    	var height3=$('.equal3b').height();
+    	console.log($('.equal3b').height());
+    	console.log(height3)
+    	$('.equal3').height(height3-15);
+    	console.log($('.equal3').height());
+    	//console.log(_3b.height());
+    	//jss.set('.equal3',{'height':object});
     });
   </script>
 </html>

@@ -40,7 +40,6 @@ module.exports = function (data) {
 
                         page.head=beautifyHtml(page.head);
                         page.scripts=beautifyHtml(page.scripts);
-                        page.scripts=beautifyJs(page.scripts);
                         page.header=beautifyHtml(page.header);
                         page.content=beautifyHtml(page.content);
                         res.render('update', page);

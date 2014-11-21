@@ -8,14 +8,13 @@
     <meta name="keywords" content="tu-varna, knt, computers, education, university">
     <meta name="author" content="hackohackob">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/demo.css">
     <link rel="stylesheet" href="/stylesheets/icons.css">
     <link rel="stylesheet" href="/stylesheets/component.css">
     <link rel="stylesheet" href="/stylesheets/uikit.almost-flat.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/stylesheets/codemirror.css">
     <style>
       h1{font-size:10em; font-family: 'Comfortaa'; color:white; text-align:center;}
       .st-pusher .st-content{ background: url("http://nstechnologies.co.in/images/Website-maintenance-by-Xynez-Global-Media.jpg") no-repeat center center fixed; }
@@ -24,14 +23,9 @@
       .content-box-white-title{color:#0f5586;}
       .uk-form input {display:block; margin:20px auto; }
       .uk-form textarea {display:block; width:90%; margin:20px auto; box-sizing:border-box; text-align:left; }
-      fieldset {color: #000; font-size:20px;}
+      fieldset {color: #000; }
     </style>
     <script src="/javascripts/jquery-1.11.0.js"></script>
-    <script src="/javascripts/modernizr.custom.js"></script>
-    <script src="/javascripts/jss.js"></script>
-    <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
-    <script src="/javascripts/jquery.fittext.js"></script>
-    <script src="/javascripts/uikit.min.js"></script>
   </head>
   <body>
     <div id="st-container" class="st-container">
@@ -85,13 +79,20 @@
               <div class="content-box-white">
                 <div class="content-box-white-title">Промяна на страница </div>
                 <form action="/change" method="post" class="uk-form">
-                  <fieldset data-uk-margin>name
-                    <input type="text" name="name">head
-                    <textarea type="text" name="head"></textarea>scripts
-                    <textarea id="script" type="text" name="scripts"></textarea>header
-                    <textarea type="text" name="header"></textarea>content
-                    <textarea id="first" type="text" name="content"></textarea>locals
-                    <textarea type="text" name="locals"></textarea>dateCreated
+                  <fieldset data-uk-margin>
+                    <div class="uk-badge">name</div>
+                    <input type="text" name="name">
+                    <div class="uk-badge">head</div>
+                    <textarea type="text" name="head"></textarea>
+                    <div class="uk-badge">scripts</div>
+                    <textarea id="script" type="text" name="scripts"></textarea>
+                    <div class="uk-badge">header</div>
+                    <textarea type="text" name="header"></textarea>
+                    <div class="uk-badge">content</div>
+                    <textarea id="first" type="text" name="content"></textarea>
+                    <div class="uk-badge">locals</div>
+                    <textarea type="text" name="locals"></textarea>
+                    <div class="uk-badge">dateCreated</div>
                     <input type="text" name="dateCreated">
                     <button type="submit" class="uk-button-uk-button-success">Изпрати</button>
                   </fieldset>
@@ -105,6 +106,11 @@
   </body>
   <script src="/javascripts/classie.js"></script>
   <script src="/javascripts/sidebarEffects.js"></script>
+  <script src="/javascripts/modernizr.custom.js"></script>
+  <script src="/javascripts/jss.js"></script>
+  <script src="/javascripts/jquery.mCustomScrollbar.js"></script>
+  <script src="/javascripts/jquery.fittext.js"></script>
+  <script src="/javascripts/uikit.min.js"></script>
   <script>
     $(function(){
             $('.st-menu').mCustomScrollbar({
@@ -123,7 +129,6 @@
     });
   </script>
   <script src="/javascripts/jquery.autosize.js"></script>
-  <script src="/javascripts/codemirror.js"></script>
   <script>
     $(function(){
     	$('textarea').autosize();

@@ -33,6 +33,7 @@
 .content-box-content{font-family:"Poiret One"; width:100%; color:#000; }
 .content-box-content ul { list-style-type:none; padding:0;}
 .content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:18px; margin:5%; padding:4%; }
+/*.content-box-white .content-box-content p {text-align:justify; font-family:"Comfortaa"; font-size:18px; margin:5%; padding:4%; }*/
 .content-box-content .list1 {font-family:"Comfortaa"; margin:2% 5%; font-size:17px; color:#fff; text-align:center;}
 .content-box-content .list1 li{ padding:1%;}
 .content-box-content .list1 a {color:#fff; decoration:underline;}
