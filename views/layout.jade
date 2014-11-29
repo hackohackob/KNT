@@ -26,57 +26,57 @@ html
           li.menu-list-main
             span(class="icon icon-study") Основно меню
           li
-            a(href="/") Начало
+            a(href="#" onclick="ajaxLoad('index')") Начало
           li
-            a(href="/uch_proces") Учебен процес
+            a(href="#" onclick="ajaxLoad('uch_proces')") Учебен процес
           li
-            a(href="#") Академичен състав
+            a(href="#" onclick="ajaxLoad('ajax-test')") Академичен състав
           li
-            a(href="#") Научни изследвания
+            a(href="#" onclick="ajaxLoad('ajax-test')") Научни изследвания
           li
-            a(href="#") Списание КНТ
+            a(href="#" onclick="ajaxLoad('ajax-test')") Списание КНТ
           li
-            a(href="#") Учебни курсове
+            a(href="#" onclick="ajaxLoad('ajax-test')") Учебни курсове
           li
-            a(href="#") Научни проекти
+            a(href="#" onclick="ajaxLoad('ajax-test')") Научни проекти
           li
-            a(href="#") Международни проекти
+            a(href="#" onclick="ajaxLoad('ajax-test')") Международни проекти
           li
-            a(href="#") История
+            a(href="#" onclick="ajaxLoad('ajax-test')") История
           li
-            a(href="#") Новини
+            a(href="#" onclick="ajaxLoad('ajax-test')") Новини
           li
-            a(class="menu-list-prev" href="#") Връзки и контакти
+            a(class="menu-list-prev" href="#" onclick="ajaxLoad('ajax-test')") Връзки и контакти
           li(class="menu-list-main long")
             span
               div(class="icon icon-study")
               span Студентска олимпиада по програмиране
           li
-            a(class="icon icon-study" href="#") Задачи и решения
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Задачи и решения
           li
-            a(class="icon icon-study" href="#") Снимки
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Снимки
           li
-            a(class="icon icon-study menu-list-prev" href="#") Архив на PC<sup>2</sup>
+            a(class="icon icon-study menu-list-prev" href="#" onclick="ajaxLoad('ajax-test')") Архив на PC<sup>2</sup>
           li.menu-list-main
             span(class="icon icon-study" ) Асоциация на възпитаниците
           li
-            a(class="icon icon-study" href="#") Регистрация на випускници
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Регистрация на випускници
           li(class="menu-list-main long")
             span
               div(class="icon icon-study")
               span Втора конференция с международно участие
           li
-            a(class="icon icon-study" href="#") Начало
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Начало
           li
-            a(class="icon icon-study" href="#") Организатори
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Организатори
           li
-            a(class="icon icon-study" href="#") Тематични направления
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Тематични направления
           li
-            a(class="icon icon-study" href="#") Оформление
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Оформление
           li
-            a(class="icon icon-study" href="#") Програма
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Програма
           li
-            a(class="icon icon-study" href="#") Контакти
+            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Контакти
       div(class="st-pusher")
         div(class="st-content")
           div(class="st-content-inner")
@@ -94,22 +94,7 @@ html
   script(src='/javascripts/jquery.mCustomScrollbar.js')
   script(src='/javascripts/jquery.fittext.js')
   script(src='/javascripts/uikit.min.js')
-  script.
-    $(function(){
-            $('.st-menu').mCustomScrollbar({
-              theme:'minimal-dark',
-              axis:'y',
-              scrollInertia:1000,
-              autoHideScrollbar: true
-            });
-      var long=$('.long');
-      for(var i=0,len=long.length;i<len;i++){
-        $(long[0].children[0]).addClass('checking-now'+i.toString());
-          jss.set('.st-menu .checking-now'+i.toString()+' div',{
-            'top':(($('.checking-now'+i.toString())[0].clientHeight-10)/2).toString()+'px'
-          });
-      };
-    });
+  script(src='/javascripts/script.js')
   block end-script
 
 

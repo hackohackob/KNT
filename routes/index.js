@@ -96,6 +96,22 @@ module.exports = function (data) {
         .get('/',function(req,res){
             res.redirect('/index');
         })
+        .get('/page/:name',function(req,res){
+            var path=req.path;
+            path=path.split('/')[2];
+            if(path[0]==='/'){
+                path=path.slice(1);
+            }
+            console.log('page path:'+path);
+            data.pages.byName(path)
+                .then(function(page){
+                    res.json(page);
+                },
+                function(err){
+                    res.status(400)
+                        .render('error');
+                });
+        })
         .get('/:path', function (req, res) {
             var path=req.path;
             if(path[0]==='/'){
