@@ -111,6 +111,7 @@ module.exports = function (data) {
                 });
         })
         .get('/page/:name',function(req,res){
+
             var path=req.path;
             path=path.split('/')[2];
             if(path[0]==='/'){
