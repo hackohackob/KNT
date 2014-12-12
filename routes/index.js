@@ -94,7 +94,21 @@ module.exports = function (data) {
                 .then();
         })
         .get('/',function(req,res){
-            res.redirect('/index');
+            console.log('loading index');
+            data.pages.byName('index')
+                .then(function(page){
+                    data.common.inject(page,'index')
+                        .then(function(page){
+                            res.render('index',page);
+                        },function(err){
+                            res.status(400)
+                                .render('error');
+                        });
+                },
+                function(err){
+                    res.status(400)
+                        .render('error');
+                });
         })
         .get('/page/:name',function(req,res){
             var path=req.path;

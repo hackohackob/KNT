@@ -19,71 +19,71 @@ html
     script(src='/javascripts/jquery-1.11.0.js')
   body
     div(id="st-container" class="st-container")
-      nav(class="st-menu st-effect-1" id="menu-1")
+      nav(class="st-menu st-effect-1 unselectable" id="menu-1")
         //TODO:
         h2 ТУ - Варна
         ul
           li.menu-list-main
             span(class="icon icon-study") Основно меню
           li
-            a(href="#" onclick="ajaxLoad('index')") Начало
+            a(onclick="ajaxLoad('index')") Начало
           li
-            a(href="#" onclick="ajaxLoad('uch_proces')") Учебен процес
+            a(onclick="ajaxLoad('uch_proces')") Учебен процес
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Академичен състав
+            a(onclick="ajaxLoad('ajax-test')") Академичен състав
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Научни изследвания
+            a(onclick="ajaxLoad('ajax-test')") Научни изследвания
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Списание КНТ
+            a(onclick="ajaxLoad('ajax-test')") Списание КНТ
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Учебни курсове
+            a(onclick="ajaxLoad('ajax-test')") Учебни курсове
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Научни проекти
+            a(onclick="ajaxLoad('ajax-test')") Научни проекти
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Международни проекти
+            a(onclick="ajaxLoad('ajax-test')") Международни проекти
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") История
+            a(onclick="ajaxLoad('ajax-test')") История
           li
-            a(href="#" onclick="ajaxLoad('ajax-test')") Новини
+            a(onclick="ajaxLoad('ajax-test')") Новини
           li
-            a(class="menu-list-prev" href="#" onclick="ajaxLoad('ajax-test')") Връзки и контакти
+            a(class="menu-list-prev" onclick="ajaxLoad('ajax-test')") Връзки и контакти
           li(class="menu-list-main long")
             span
               div(class="icon icon-study")
               span Студентска олимпиада по програмиране
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Задачи и решения
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Задачи и решения
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Снимки
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Снимки
           li
-            a(class="icon icon-study menu-list-prev" href="#" onclick="ajaxLoad('ajax-test')") Архив на PC<sup>2</sup>
+            a(class="icon icon-study menu-list-prev" onclick="ajaxLoad('ajax-test')") Архив на PC<sup>2</sup>
           li.menu-list-main
             span(class="icon icon-study" ) Асоциация на възпитаниците
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Регистрация на випускници
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Регистрация на випускници
           li(class="menu-list-main long")
             span
               div(class="icon icon-study")
               span Втора конференция с международно участие
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Начало
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Начало
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Организатори
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Организатори
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Тематични направления
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Тематични направления
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Оформление
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Оформление
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Програма
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Програма
           li
-            a(class="icon icon-study" href="#" onclick="ajaxLoad('ajax-test')") Контакти
+            a(class="icon icon-study" onclick="ajaxLoad('ajax-test')") Контакти
       div(class="st-pusher")
         div(class="st-content")
           div(class="st-content-inner")
             div(id='st-trigger-effects')
               button(data-effect='st-effect-1')
                 span(class="uk-icon-bars")
-            header(class="header")
+            header(class="header unselectable")
               block header
             div(class="main clearfix")
               block content

@@ -1,4 +1,17 @@
+var onPurposeChange=false;
+console.log("purspose changed: "+onPurposeChange);
+
 $(function(){
+    var hash=location.hash;
+    console.log(hash);
+    if(document.url==="") {
+        if (hash.substr(1) === "") {
+            console.log('hash is null');
+            ajaxLoad('index');
+        } else {
+            ajaxLoad(hash.substr(1));
+        }
+    }
     $('.st-menu').mCustomScrollbar({
         theme:'minimal-dark',
         axis:'y',
@@ -15,9 +28,12 @@ $(function(){
 });
 
 function ajaxLoad(page){
+    console.log('ajax loading '+ page);
+    onPurposeChange=true;
+    console.log("purspose changed: "+onPurposeChange);
     $.ajax(
         {
-            url: '/page/' + page
+            url: '/page/' + page +'#'
         }
     )
     .done(
@@ -25,6 +41,7 @@ function ajaxLoad(page){
             rewritePage(data);
             $('#st-container').removeClass('st-menu-open');
             $('.st-content').scrollTop(0);
+            onPurposeChange=false;
         });
 }
 
@@ -37,6 +54,24 @@ function rewritePage(data){
     } else {
         $('body').append(data.scripts.toString());
     }
-    window.history.pushState({}, '', '/'+data.name);
+    window.history.pushState({}, '', '/#'+data.name);
+
 }
+
+window.onhashchange=function(){
+    if(!onPurposeChange)
+    {
+        var hash=location.hash.substr(1);
+        if(hash!="") {
+            ajaxLoad(hash);
+        } else {
+            location.reload();
+        }
+    }
+    console.log('on purpose: '+onPurposeChange);
+    onPurposeChange=false;
+    console.log("purspose changed: "+onPurposeChange);
+};
+
+
 
