@@ -95,20 +95,21 @@ module.exports = function (data) {
         })
         .get('/',function(req,res){
             console.log('loading index');
-            data.pages.byName('index')
-                .then(function(page){
-                    data.common.inject(page,'index')
-                        .then(function(page){
-                            res.render('index',page);
-                        },function(err){
-                            res.status(400)
-                                .render('error');
-                        });
-                },
-                function(err){
-                    res.status(400)
-                        .render('error');
-                });
+            res.redirect('http://tu-varna.bg');
+            //data.pages.byName('index')
+            //    .then(function(page){
+            //        data.common.inject(page,'index')
+            //            .then(function(page){
+            //                res.render('index',page);
+            //            },function(err){
+            //                res.status(400)
+            //                    .render('error');
+            //            });
+            //    },
+            //    function(err){
+            //        res.status(400)
+            //            .render('error');
+            //    });
         })
         .get('/page/:name',function(req,res){
 
