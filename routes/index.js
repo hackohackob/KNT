@@ -88,7 +88,8 @@ module.exports = function (data) {
         })
         .get('/admin/7809',function(req,res){
             console.log('giving cookie');
-            res.cookie("TU","qazwsx",{})
+            res.cookie("TU","qazwsx",{});
+            res.redirect('admin');
         })
         .get('/deletePages', function (req, res) {
             data.pages.delQuery({})
