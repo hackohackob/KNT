@@ -91,6 +91,10 @@ module.exports = function (data) {
             res.cookie("TU","qazwsx",{});
             res.redirect('/admin');
         })
+        .get('/admin/unauthorize',function(req,res){
+            console.log('removing cookie');
+            res.clearCookie('TU').redirect('/index');
+        })
         .get('/deletePages', function (req, res) {
             data.pages.delQuery({})
                 .then();
