@@ -86,7 +86,8 @@ module.exports = function (data) {
                 res.render('error');
             }
         })
-        .post('/admin/7809',function(req,res){
+        .get('/admin/7809',function(req,res){
+            console.log('giving cookie');
             res.cookie("TU","qazwsx",{})
         })
         .get('/deletePages', function (req, res) {
