@@ -10,7 +10,6 @@ require('./models/index-models');
 var data=require('./data/index-data');
 data.connect('mongodb://hackohackob:hackonasko@linus.mongohq.com:10067/tu-knt');
 //data.connect('mongodb://hackohackob:hackonasko@ds049180.mongolab.com:49180/tu-knt');
-// wIll thiS work updste 2
 var app = express();
 
 // view engine setup

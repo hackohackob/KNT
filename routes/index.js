@@ -21,7 +21,7 @@ module.exports = function (data) {
                             .json(err);
                     });
             }else {
-                res.render('error');
+                res.render('error-unauth');
             }
         })
         .get('/test',function(req,res){
@@ -48,7 +48,7 @@ module.exports = function (data) {
                             .render('error');
                     })
             }else {
-                res.render('error');
+                res.render('error-unauth');
             }
         })
         .post('/change', function (req, res) {
@@ -62,7 +62,7 @@ module.exports = function (data) {
                             .json(err);
                     });
             }else {
-                res.render('error');
+                res.render('error-unauth');
             }
         })
         .post('/common', function (req, res) {
@@ -76,14 +76,14 @@ module.exports = function (data) {
                             .json(err);
                     });
             }else {
-                res.render('error');
+                res.render('error-unauth');
             }
         })
         .get('/admin',function(req,res){
             if(req.cookies.TU=='qazwsx'){
                 res.render('admin');
             } else {
-                res.render('error');
+                res.render('error-unauth');
             }
         })
         .get('/admin/7809',function(req,res){
@@ -93,7 +93,7 @@ module.exports = function (data) {
         })
         .get('/admin/unauthorize',function(req,res){
             console.log('removing cookie');
-            res.clearCookie('TU').redirect('/index');
+            res.clearCookie('TU').redirect('/');
         })
         .get('/deletePages', function (req, res) {
             data.pages.delQuery({})
@@ -139,12 +139,15 @@ module.exports = function (data) {
                 path=path.slice(1);
             }
             console.log('Path:'+path);
+            
             data.pages.byName(path)
                 .then(function(page){
                     data.common.inject(page,path)
                         .then(function(page){
+                            console.log('found path');
                             res.render('index',page);
                         },function(err){
+                            console.log('not found path');
                             res.status(400)
                                 .render('error');
                         });

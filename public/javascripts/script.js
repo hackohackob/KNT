@@ -1,23 +1,25 @@
 var onPurposeChange=false;
-console.log("purspose changed: "+onPurposeChange);
+console.log("purspose changed1: "+onPurposeChange);
 
 $(function(){
     var hash=location.hash;
-    console.log(hash);
-    if(document.url==="") {
-        if (hash.substr(1) === "") {
-            console.log('hash is null');
-            ajaxLoad('index');
-        } else {
-            ajaxLoad(hash.substr(1));
-        }
+    console.log('hash: '+hash);
+    console.log('hash[0]: '+hash[0]);
+    console.log('hash[1]: '+hash[1]);
+    console.log('hash[2]: '+hash[2]);
+    if(hash.toString())
+    {
+        console.log('will ajax load: '+hash.substr(1))
+        ajaxLoad(hash.substr(1));
     }
+    
     $('.st-menu').mCustomScrollbar({
         theme:'minimal-dark',
         axis:'y',
         scrollInertia:1000,
         autoHideScrollbar: true
     });
+    
     var long=$('.long');
     for(var i=0,len=long.length;i<len;i++){
         $(long[0].children[0]).addClass('checking-now'+i.toString());
