@@ -86,8 +86,14 @@ module.exports = function (data) {
                 res.render('error');
             }
         })
-        .post('/admin/7809',function(req,res){
-            res.cookie("TU","qazwsx",{})
+        .get('/admin/7809',function(req,res){
+            console.log('giving cookie');
+            res.cookie("TU","qazwsx",{});
+            res.redirect('/admin');
+        })
+        .get('/admin/unauthorize',function(req,res){
+            console.log('removing cookie');
+            res.clearCookie('TU').redirect('/index');
         })
         .get('/deletePages', function (req, res) {
             data.pages.delQuery({})
