@@ -11,11 +11,11 @@ block head-style
 block header
 	div(id="buffer")
 		img(id="logo" src="images/logow.png")
-		div(class="uk-width-large-1-1 uk-visible-large")
-			h1 Страници & Потребители
+		div(id="heading")
+			h1 Добавяне на страници
 block content
 	div(class="content-box-white")
-		div(class="content-box-white-title") Добавяне на страници
+		div(class="content-box-white-title") Добавяне на данни за страницата
 		form(class="uk-form" action="/pages" method="post")
 			fieldset(data-uk-margin)
 				input(type="text" name="_id" placeholder="id")

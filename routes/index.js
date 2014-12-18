@@ -25,16 +25,13 @@ module.exports = function (data) {
             }
         })
         .get('/test',function(req,res){
-            console.log('rendering test');
             res.render('test');
         })
         .get('/test2',function(req,res){
-            console.log('rendering test2');
             res.render('test2');
         })
         .get('/change/:name',function(req,res){
             if(req.cookies.TU=='qazwsx') {
-                console.log('update ' + req.param('name'));
                 data.pages.byName(req.param('name'))
                     .then(function (page) {
 
@@ -87,43 +84,32 @@ module.exports = function (data) {
             }
         })
         .get('/admin/7809',function(req,res){
-            console.log('giving cookie');
             res.cookie("TU","qazwsx",{});
             res.redirect('/admin');
         })
         .get('/admin/unauthorize',function(req,res){
-            console.log('removing cookie');
             res.clearCookie('TU').redirect('/');
         })
         .get('/deletePages', function (req, res) {
             data.pages.delQuery({})
                 .then();
         })
-        .get('/',function(req,res){
-            console.log('loading index');
+        .get('/', function(req, res) {
             data.pages.byName('index')
-                .then(function(page){
-                    data.common.inject(page,'index')
-                        .then(function(page){
-                            res.render('index',page);
-                        },function(err){
-                            res.status(400)
-                                .render('error');
-                        });
-                },
-                function(err){
+                .then(function(page) {
+                    res.render('index', page);
+                }, function(err) {
                     res.status(400)
-                        .render('error');
+                       .render('error');
                 });
         })
         .get('/page/:name',function(req,res){
-
             var path=req.path;
             path=path.split('/')[2];
             if(path[0]==='/'){
                 path=path.slice(1);
             }
-            console.log('page path:'+path);
+            
             data.pages.byName(path)
                 .then(function(page){
                     res.json(page);
@@ -138,16 +124,13 @@ module.exports = function (data) {
             if(path[0]==='/'){
                 path=path.slice(1);
             }
-            console.log('Path:'+path);
             
             data.pages.byName(path)
                 .then(function(page){
                     data.common.inject(page,path)
                         .then(function(page){
-                            console.log('found path');
                             res.render('index',page);
                         },function(err){
-                            console.log('not found path');
                             res.status(400)
                                 .render('error');
                         });

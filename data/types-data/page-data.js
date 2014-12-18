@@ -108,7 +108,7 @@ function getByName(name) {
 
 function getAll(){
     var promise = new Promise(function (resolve, reject) {
-        Page.find({}, function (err, page) {
+        Page.find({}, function (err, pages) {
             if (err) {
                 reject(err);
                 return;
