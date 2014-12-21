@@ -107,6 +107,7 @@
 }
 
 .st-menu ul li a,.st-menu ul li>span {
+    text-decoration:none;
     margin-left: 40px;
 }
 
