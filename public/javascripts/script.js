@@ -1,5 +1,4 @@
 var onPurposeChange=false;
-console.log("purspose changed1: "+onPurposeChange);
 
 $(function(){
     var hash=location.hash;
@@ -11,8 +10,9 @@ $(function(){
     $('.st-menu').mCustomScrollbar({
         theme:'minimal-dark',
         axis:'y',
-        scrollInertia:1000,
-        autoHideScrollbar: true
+        scrollInertia:700,
+        autoHideScrollbar: true,
+        mouseWheel:{ scrollAmount: 150 }
     });
     
     var long=$('.long');
