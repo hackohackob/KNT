@@ -12,6 +12,11 @@ body {
     user-select: none;
 }
 
+.st-menu li a input{
+    
+    display:none;
+}
+
 #st-trigger-effects {
     position: fixed;
     top: 20px;

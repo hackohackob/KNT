@@ -9,8 +9,8 @@ block head-style
     |.content-box-white-title{color:#0f5586;}
     |#buffer{padding:1vw;}
 block header
-  div(id="buffer")
-    img(id="logo" src="images/logow.png")
+  div(id="buffer" onload="fillPage()")
+    img(id="logo" src="/images/logow.png")
     div(id="heading")
       h1 Error 404
 block content

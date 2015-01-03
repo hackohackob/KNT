@@ -3,13 +3,8 @@ console.log("purspose changed1: "+onPurposeChange);
 
 $(function(){
     var hash=location.hash;
-    console.log('hash: '+hash);
-    console.log('hash[0]: '+hash[0]);
-    console.log('hash[1]: '+hash[1]);
-    console.log('hash[2]: '+hash[2]);
     if(hash.toString())
     {
-        console.log('will ajax load: '+hash.substr(1))
         ajaxLoad(hash.substr(1));
     }
     
@@ -27,12 +22,12 @@ $(function(){
             'top':(($('.checking-now'+i.toString())[0].clientHeight-10)/2).toString()+'px'
         });
     };
+    
+    fillPage();
 });
 
 function ajaxLoad(page){
-    console.log('ajax loading '+ page);
     onPurposeChange=true;
-    console.log("purspose changed: "+onPurposeChange);
     $.ajax(
         {
             url: '/page/' + page +'#'
@@ -56,6 +51,7 @@ function rewritePage(data){
     } else {
         $('body').append(data.scripts.toString());
     }
+    fillPage();
     window.history.pushState({}, '', '/#'+data.name);
 
 }
@@ -75,5 +71,29 @@ window.onhashchange=function(){
     console.log("purspose changed: "+onPurposeChange);
 };
 
+function change(){
+    $('.st-menu li a input').css('display','inline-block');
+}
 
+function change2(){
+    var name=$('#change-name')[0].value;
+    window.location="http://"+window.location.host+"/change/"+name;
+}
+
+function fillPage(){
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    x = w.innerWidth || e.clientWidth || g.clientWidth,
+    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+    
+    if($('.st-content-inner').height() < y){
+        var difference=y-$('.st-content-inner').height();
+        var boxesArray=$('.content-box-white, .content-box-blue');
+        var element=boxesArray[boxesArray.length-1]; console.log(element);
+        var oldHeight=element.offsetHeight;
+        element.style.height=(oldHeight+difference)+"px";
+    }
+}
 

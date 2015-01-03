@@ -84,7 +84,9 @@ html
           li
             a(class="icon icon-study" href="/admin") Добавяне на страници
           li
-            a(class="icon icon-study" href="/change") Промяна на страници
+            a(class="icon icon-study" onclick="change()") Промяна на страници
+              input(id="change-name" type="text" placeholder="input page" class="uk-width-1-2")
+              input(onclick="change2()" type="button" class="uk-button uk-button-mini uk-button-success uk-width-1-2" value="Change")
       div(class="st-pusher")
         div(class="st-content")
           div(class="st-content-inner")
