@@ -43,7 +43,7 @@ function ajaxLoad(page){
 }
 
 function rewritePage(data){
-    $('head style:first-of-type').replaceWith(data.head);
+    $('.custom-head').replaceWith(data.head);
     $('.header').html(data.header);
     $('.main').html(data.content);
     if($('.custom-script')[0]!=undefined){

@@ -5,7 +5,7 @@ var Page=mongoose.model('pages');
 var fs=require('fs');
 
 function save(page) {
-    console.log('Preparing to save ' + JSON.stringify(person));
+    //console.log('Preparing to save ' + JSON.stringify(person));
     var promise = new Promise(function (resolve, reject) {
         var dbPerson = new Page(page);
         dbPerson.save(function (err, dbData) {
@@ -60,8 +60,6 @@ function updatePage(body) {
             dateCreated:body.dateCreated
         };
         Page.update({name:body.name},pageToSave,{},function(err,dbData){
-            console.log(err);
-            console.log(dbData);
             if (err) {
                 reject(err);
                 return;
@@ -122,7 +120,6 @@ function getAll(){
 
 function deleteByQuery(query){
     var promise = new Promise(function (resolve,reject){
-        console.log('deletion query: '+query);
         Page.remove(query,function(err,done){
             if(err){
                 reject(err);
