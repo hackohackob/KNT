@@ -2,11 +2,11 @@ extends layout
 
 block head-style
   link(href='https://fonts.googleapis.com/css?family=Poiret+One|Comfortaa&subset=latin,cyrillic' rel='stylesheet' type='text/css')
-  style
+  style(class="custom-head")
     | h1{font-size:7em; font-family: 'Comfortaa'; color:white; text-align:center;}
     |.main *{margin:0 auto; text-align:center;}
     |.content-box-white{background-color:white; padding:50px; min-height:500px; } 
-    |.content-box-white-title{color:#0f5586;}
+    |.content-box-white-title{color:#0f5586; display:inline-block; margin-bottom:50px;}
     |#buffer{padding:1vw;}
 block header
   div(id="buffer" onload="fillPage()")
