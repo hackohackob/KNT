@@ -144,28 +144,3 @@ module.exports = function (data) {
     return router;
 
 };
-
-
-//var home={
-//  jade:'extends ./views/layout \nblock content \n    h1 Hackoooo #{title} #{something}',
-//  locals:{
-//    title:'Hacko',
-//    something:'Nasko'
-//  }
-//};
-///* GET home page. */
-//router.get('/', function(req, res) {
-//  data.pages.
-//  res.render('index', { something: '<div style="min-height:200px; background-color:red;">YES </div>' });
-//});
-//
-//router.get('/users', function(req, res) {
-//  res.render('error');
-//});
-//
-//router.get('/*', function(req, res) {
-//  console.log('/*');
-//  res.render('error');
-//});
-//
-//module.exports = router;
